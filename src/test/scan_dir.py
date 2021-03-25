@@ -8,7 +8,6 @@ import os
 # User Imports
 
 # * Code
-
 def scan_dir(dirPath: str):
     # scan directory and extract the dirs and files
     dirPath = Path(dirPath)
@@ -27,6 +26,7 @@ def scan_dir(dirPath: str):
     return dataDirectories, dataFiles
 
 def process_dirs(dirPaths: str, courseDataInfo: {}):
+    # process the dirs and return the data about the courses in a format of a list of list
 
     coursesEventData = []
     coursesMaterialData = []
@@ -49,7 +49,6 @@ def process_dirs(dirPaths: str, courseDataInfo: {}):
             fileMaterial = data[6]
 
             courseID = courseDataInfo[courseType + "-" + courseNum]
-
 
             # add to event csv
             if number not in lectureNumberExisting:
