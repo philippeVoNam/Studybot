@@ -11,7 +11,7 @@ def get_course_resource(course):
 
 def get_course_subject(course):
     subj = course['Subject']
-    return STUDYBOT[subj]
+    return STUDYBOT[subj] # <http://www.example.org/SUBJ>
 
 
 def convert():
@@ -21,26 +21,26 @@ def convert():
     courses['Outline'] = courses['Outline'].fillna('missing')
 
     for i, course in courses.iterrows():
-        res = get_course_resource(course)
+        course_ref = get_course_resource(course)
         subj = get_course_subject(course)
         title = course['Long Title']
         courseNumber = course['Catalog']
         desc = course['Descr']
 
         graph.add((
-            res, RDF.type, TEACH.Course
+            course_ref, RDF.type, TEACH.Course
         ))
         graph.add((
-            res, TEACH.courseTitle, Literal(title, lang='en')
+            course_ref, TEACH.courseTitle, Literal(title, lang='en')
         ))
         graph.add((
-            res, TEACH.courseDescription, Literal(desc, lang='en')
+            course_ref, TEACH.courseDescription, Literal(desc, lang='en')
         ))
         graph.add((
-            res, STUDY.courseSubject, subj
+            course_ref, STUDY.courseSubject, subj
         ))
         graph.add((
-            res, STUDY.courseNumber, Literal(courseNumber)
+            course_ref, STUDY.courseNumber, Literal(courseNumber)
         ))
 
         see_also = course['See Also']
@@ -48,7 +48,7 @@ def convert():
         
         if see_also != 'missing':
             graph.add((
-                res, RDFS.seeAlso, URIRef(see_also)
+                course_ref, RDFS.seeAlso, URIRef(see_also)
             ))
         if outline != 'missing':
             outline_node = BNode()
@@ -59,7 +59,7 @@ def convert():
                 outline_node, RDF.resource, URIRef(outline)
             ))
             graph.add((
-                res, TEACH.hasCourseMaterial, outline_node
+                course_ref, TEACH.hasCourseMaterial, outline_node
             ))
 
 
