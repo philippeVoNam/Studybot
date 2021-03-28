@@ -28,7 +28,7 @@
   study:courseNumber "474";
   rdf:seeAlso <http://concordia.catalog.acalog.com/preview_course_nopop.php?catoid=1&coid=2718> ;
   teach:hasCourseMaterial [
-    rdf:seeAlso "http://link.to.course.outline" ;
+    rdfs:seeAlso "http://link.to.course.outline" ;
     rdf:type study:CourseOutline .
   ] .
 
