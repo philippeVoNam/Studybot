@@ -39,31 +39,65 @@ def process_dirs(dirPaths: str, courseDataInfo: {}):
 
         # get event
         lectureNumberExisting = []
+        tutorialNumberExisting = []
         for file in dataFiles:
             data = file.split("/")
-            courseType = data[1]
-            courseNum = data[2]
-            type_ = data[3]
-            number = int(data[4])
-            typeMaterial = data[5]
-            fileMaterial = data[6]
 
-            courseID = courseDataInfo[courseType + "-" + courseNum]
+            # re-write file
+            absfile = os.path.abspath(file)
+            file = "file://" + absfile
 
-            # add to event csv
-            if number not in lectureNumberExisting:
-                
-                # add to event dict, we use to see, given the path, which event it is
+            if data[5] == "tutorial":
+                courseType = data[1]
+                courseNum = data[2]
+                type_ = data[3]
+                number = int(data[4])
+                lectureMaterialType = data[5]
+                typeMaterial = data[6]
+                fileMaterial = data[7]
+
+                courseID = courseDataInfo[courseType + "-" + courseNum]
+
+                # add to event csv
+                if number not in tutorialNumberExisting:
+                    
+                    # add to event dict, we use to see, given the path, which event it is
+                    keyStr = "/".join(data[0:5])
+                    eventData[keyStr] = eventNum
+
+                    tutorialNumberExisting.append(number)
+                    coursesEventData.append([eventNum, courseID, lectureMaterialType, number])
+                    eventNum += 1
+
+                # add to material csv
                 keyStr = "/".join(data[0:5])
-                eventData[keyStr] = eventNum
+                eventNumData = eventData[keyStr]
+                coursesMaterialData.append([eventNumData, typeMaterial, file])
 
-                lectureNumberExisting.append(number)
-                coursesEventData.append([eventNum, courseID, type_, number])
-                eventNum += 1
+            else:
+                courseType = data[1]
+                courseNum = data[2]
+                type_ = data[3]
+                number = int(data[4])
+                typeMaterial = data[5]
+                fileMaterial = data[6]
 
-            # add to material csv
-            keyStr = "/".join(data[0:5])
-            eventNumData = eventData[keyStr]
-            coursesMaterialData.append([eventNumData, typeMaterial, file])
+                courseID = courseDataInfo[courseType + "-" + courseNum]
+
+                # add to event csv
+                if number not in lectureNumberExisting:
+                    
+                    # add to event dict, we use to see, given the path, which event it is
+                    keyStr = "/".join(data[0:5])
+                    eventData[keyStr] = eventNum
+
+                    lectureNumberExisting.append(number)
+                    coursesEventData.append([eventNum, courseID, type_, number])
+                    eventNum += 1
+
+                # add to material csv
+                keyStr = "/".join(data[0:5])
+                eventNumData = eventData[keyStr]
+                coursesMaterialData.append([eventNumData, typeMaterial, file])
 
     return coursesEventData, coursesMaterialData
