@@ -17,3 +17,6 @@ courses = pd.merge(course_catalog, course_descriptions, on='Course ID')
 
 subjects = courses['Subject'].unique()
 
+universities = pd.read_csv(os.path.join(
+    DATA_DIR, 'universities.csv'),
+    encoding='latin1')
