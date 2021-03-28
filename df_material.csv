@@ -1,49 +1,49 @@
-,EventID,Type,Link
-0,0,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/3/worksheets/worksheet02.pdf
-1,0,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/3/slides/slides03.pdf
-2,1,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/9/worksheets/worksheet08.pdf
-3,1,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/9/slides/slides09.pdf
-4,2,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/4/worksheets/worksheet03.pdf
-5,2,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/4/slides/slides04.pdf
-6,3,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/worksheets/worksheet01.pdf
-7,3,lab,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/lab/py_tut.pdf
-8,3,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/slides/slides02.pdf
-9,4,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/1/slides/slides01.pdf
-10,5,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/8/worksheets/worksheet07.pdf
-11,5,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/8/slides/slides08.pdf
-12,6,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/5/worksheets/worksheet04.pdf
-13,6,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/5/slides/slides05.pdf
-14,7,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/7/worksheets/worksheet06.pdf
-15,7,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/7/slides/slides07.pdf
-16,8,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/6/worksheets/worksheet05.pdf
-17,8,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/6/slides/slides06.pdf
-18,9,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
-19,9,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/tutorial/slides/SOEN 343 - Fall 2020 - Tutorial 1.pdf
-20,10,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/slides/03b UML Sequence and activity diagrams.pptx
-21,10,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/slides/03a use cases.pptx
-22,11,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/12/slides/12 distributed architecture part II.pptx
-23,11,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/12/slides/12 distributed architecture part I.pptx
-24,12,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/10/tutorial/slides/05 Tutorial anti-patterns.pptx
-25,13,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/10/slides/10 anti-patterns and refactoring.pptx
-26,14,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/11/slides/11 part 2 data-centered architectures.pptx
-27,14,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/11/slides/11 data-flow architectures.pptx
-28,15,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/9/tutorial/slides/Tutorial 04 - Exercise - Design Patterns in practice -4.pdf
-29,16,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/9/slides/09 exception_handling.pptx
-30,17,solutions,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/tutorial/solutions/Tutorial 2 UML diagrams Solutions.docx
-31,17,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/tutorial/slides/02 Tutorial UML diagrams.pptx
-32,18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04b Object Oriented design OPS case study.pptx
-33,18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04c Object Oriented advanced design principles.pptx
-34,18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04a Object Oriented design.pptx
-35,19,solutions,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/tutorial/solutions/Tutorial 1 solution.docx
-36,19,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/tutorial/slides/01 Tutorial Domain analysis.pptx
-37,20,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/slides/02b domain modeling uml class diagrams.pptx
-38,20,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/slides/02a models for software architecture.pptx
-39,21,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/1/slides/01 Introduction to sw architecture.pptx
-40,22,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/8/tutorial/slides/04 Tutorial design patterns in the wild.pptx
-41,23,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/8/slides/08 structural design_patterns.pptx
-42,24,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/5/slides/05b mvc and observer pattern.pptx
-43,24,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/5/slides/05a introduction to design patterns.pptx
-44,25,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/7/slides/07 creational design_patterns.pptx
-45,26,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
-46,27,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/slides/06b unit_testing.pptx
-47,27,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/slides/06a apidoc_generation.pptx
+EventID,Type,Link
+0,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/3/worksheets/worksheet02.pdf
+0,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/3/slides/slides03.pdf
+1,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/9/worksheets/worksheet08.pdf
+1,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/9/slides/slides09.pdf
+2,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/4/worksheets/worksheet03.pdf
+2,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/4/slides/slides04.pdf
+3,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/worksheets/worksheet01.pdf
+3,lab,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/lab/py_tut.pdf
+3,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/2/slides/slides02.pdf
+4,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/1/slides/slides01.pdf
+5,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/8/worksheets/worksheet07.pdf
+5,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/8/slides/slides08.pdf
+6,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/5/worksheets/worksheet04.pdf
+6,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/5/slides/slides05.pdf
+7,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/7/worksheets/worksheet06.pdf
+7,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/7/slides/slides07.pdf
+8,worksheets,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/6/worksheets/worksheet05.pdf
+8,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/COMP/474/Lectures/6/slides/slides06.pdf
+9,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
+9,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/tutorial/slides/SOEN 343 - Fall 2020 - Tutorial 1.pdf
+10,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/slides/03b UML Sequence and activity diagrams.pptx
+10,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/3/slides/03a use cases.pptx
+11,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/12/slides/12 distributed architecture part II.pptx
+11,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/12/slides/12 distributed architecture part I.pptx
+12,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/10/tutorial/slides/05 Tutorial anti-patterns.pptx
+13,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/10/slides/10 anti-patterns and refactoring.pptx
+14,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/11/slides/11 part 2 data-centered architectures.pptx
+14,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/11/slides/11 data-flow architectures.pptx
+15,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/9/tutorial/slides/Tutorial 04 - Exercise - Design Patterns in practice -4.pdf
+16,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/9/slides/09 exception_handling.pptx
+17,solutions,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/tutorial/solutions/Tutorial 2 UML diagrams Solutions.docx
+17,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/tutorial/slides/02 Tutorial UML diagrams.pptx
+18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04b Object Oriented design OPS case study.pptx
+18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04c Object Oriented advanced design principles.pptx
+18,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/4/slides/04a Object Oriented design.pptx
+19,solutions,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/tutorial/solutions/Tutorial 1 solution.docx
+19,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/tutorial/slides/01 Tutorial Domain analysis.pptx
+20,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/slides/02b domain modeling uml class diagrams.pptx
+20,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/2/slides/02a models for software architecture.pptx
+21,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/1/slides/01 Introduction to sw architecture.pptx
+22,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/8/tutorial/slides/04 Tutorial design patterns in the wild.pptx
+23,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/8/slides/08 structural design_patterns.pptx
+24,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/5/slides/05b mvc and observer pattern.pptx
+24,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/5/slides/05a introduction to design patterns.pptx
+25,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/7/slides/07 creational design_patterns.pptx
+26,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
+27,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/slides/06b unit_testing.pptx
+27,slides,file:///home/namv/Documents/School/Winter-2021/COMP-474/Studybot/data/SOEN/343/Lectures/6/slides/06a apidoc_generation.pptx

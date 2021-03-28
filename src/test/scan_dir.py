@@ -5,6 +5,7 @@
 # 3rd Party Imports
 from pathlib import Path
 import os
+import pandas as pd
 # User Imports
 
 # * Code
@@ -24,6 +25,38 @@ def scan_dir(dirPath: str):
             dataFiles.append(os.path.join(root,filename))
 
     return dataDirectories, dataFiles
+
+def connect_tutorial_lecture_event(csvPath: str):
+    # link the lecture event ID to it corresponding tutorial event id
+    eventLinkData = []
+    df = pd.read_csv(csvPath)
+    for index, row in df.iterrows():
+        courseID = row["CourseID"]
+        type_ = row["Type"]
+        number = row["Number"]
+        eventID = row["EventID"]
+
+        for index, row in df.iterrows():
+            compare_courseID = row["CourseID"]
+            compare_type_ = row["Type"]
+            compare_number = row["Number"]
+            compare_eventID = row["EventID"]
+
+            if courseID == compare_courseID:
+                if number == compare_number:
+                    if type_ != compare_type_:
+
+                        # [lecture event id, tutorial event id]
+
+                        if type_ == "Lectures":
+                            if [eventID, compare_eventID] not in eventLinkData:
+                                eventLinkData.append([eventID, compare_eventID])
+
+                        else: # type == tutorial
+                            if [compare_eventID, eventID] not in eventLinkData:
+                                eventLinkData.append([compare_eventID, eventID])
+
+    return eventLinkData
 
 def process_dirs(dirPaths: str, courseDataInfo: {}):
     # process the dirs and return the data about the courses in a format of a list of list
