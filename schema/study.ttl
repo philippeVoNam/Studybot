@@ -28,7 +28,7 @@
   rdfs:subClassOf teach:Material ;
   rdf:label "Course Outline"@en ;
   rdf:comment "A document outlining a course by providing useful information, such as: instructor contact information, lecture schedule, grading scheme, required reading, etc..."@en ;
-  .
+  . 
 
 <Slides>
   rdf:type rdfs:Class ;
