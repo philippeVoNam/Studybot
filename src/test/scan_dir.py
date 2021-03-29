@@ -76,10 +76,6 @@ def process_dirs(dirPaths: str, courseDataInfo: {}):
         for file in dataFiles:
             data = file.split("/")
 
-            # re-write file
-            absfile = os.path.abspath(file)
-            file = "file://" + absfile
-
             if data[5] == "tutorial":
                 courseType = data[1]
                 courseNum = data[2]
