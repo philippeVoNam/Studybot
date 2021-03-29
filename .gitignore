@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # User
-data/
+local_dataset/
 
