@@ -1,0 +1,58 @@
+EventID,CourseID,Type_x,Number,Title,ExtraEventID,Type_y,Link
+0,COMP474,Lectures,3,Vocabularies & Ontologies,1.0,worksheets,data/COMP/474/Lectures/3/worksheets/worksheet02.pdf
+1,COMP474,lab,3,Vocabularies & Ontologies,,html,data/COMP/474/Lectures/3/lab/html/COMP-474-2204-UU Lab Session #3.html
+1,COMP474,lab,3,Vocabularies & Ontologies,,slides,data/COMP/474/Lectures/3/slides/slides03.pdf
+2,COMP474,Lectures,9,Text Mining Systems,3.0,worksheets,data/COMP/474/Lectures/9/worksheets/worksheet08.pdf
+3,COMP474,lab,9,Text Mining Systems,,html,data/COMP/474/Lectures/9/lab/html/COMP-474-2204-UU Lab Session #9.html
+3,COMP474,lab,9,Text Mining Systems,,slides,data/COMP/474/Lectures/9/slides/slides09.pdf
+4,COMP474,Lectures,4,Knowledge Base Queries,5.0,worksheets,data/COMP/474/Lectures/4/worksheets/worksheet03.pdf
+5,COMP474,lab,4,Knowledge Base Queries,,html,data/COMP/474/Lectures/4/lab/html/COMP-474-2204-UU Lab Session #4.html
+5,COMP474,lab,4,Knowledge Base Queries,,slides,data/COMP/474/Lectures/4/slides/slides04.pdf
+6,COMP474,Lectures,2,Knowledge Graphs,7.0,worksheets,data/COMP/474/Lectures/2/worksheets/worksheet01.pdf
+7,COMP474,lab,2,Knowledge Graphs,,html,data/COMP/474/Lectures/2/lab/html/COMP-474-2204-UU Lab Session #2.html
+7,COMP474,lab,2,Knowledge Graphs,,slides,data/COMP/474/Lectures/2/slides/slides02.pdf
+8,COMP474,lab,1,Introduction to Intelligent Systems,,html,data/COMP/474/Lectures/1/lab/html/COMP-474-2204-UU Lab Introduction to Python.html
+8,COMP474,lab,1,Introduction to Intelligent Systems,,slides,data/COMP/474/Lectures/1/lab/slides/py_tut.pdf
+9,COMP474,Lectures,1,Introduction to Intelligent Systems,8.0,slides,data/COMP/474/Lectures/1/slides/slides01.pdf
+10,COMP474,Lectures,8,Intelligent Agents,11.0,worksheets,data/COMP/474/Lectures/8/worksheets/worksheet07.pdf
+11,COMP474,lab,8,Intelligent Agents,,html,data/COMP/474/Lectures/8/lab/html/COMP-474-2204-UU Lab Session #8.html
+11,COMP474,lab,8,Intelligent Agents,,slides,data/COMP/474/Lectures/8/slides/slides08.pdf
+12,COMP474,Lectures,5, Linked Open Data & Applications,13.0,worksheets,data/COMP/474/Lectures/5/worksheets/worksheet04.pdf
+13,COMP474,lab,5, Linked Open Data & Applications,,html,data/COMP/474/Lectures/5/lab/html/COMP-474-2204-UU Lab Session #5.html
+13,COMP474,lab,5, Linked Open Data & Applications,,slides,data/COMP/474/Lectures/5/slides/slides05.pdf
+14,COMP474,Lectures,7,Introduction to Machine Learning for Intelligent Systems,15.0,worksheets,data/COMP/474/Lectures/7/worksheets/worksheet06.pdf
+15,COMP474,lab,7,Introduction to Machine Learning for Intelligent Systems,,html,data/COMP/474/Lectures/7/lab/html/COMP-474-2204-UU Lab Session #7.html
+15,COMP474,lab,7,Introduction to Machine Learning for Intelligent Systems,,slides,data/COMP/474/Lectures/7/slides/slides07.pdf
+16,COMP474,Lectures,6,Recommender Systems,17.0,worksheets,data/COMP/474/Lectures/6/worksheets/worksheet05.pdf
+17,COMP474,lab,6,Recommender Systems,,html,data/COMP/474/Lectures/6/lab/html/COMP-474-2204-UU Lab Session #6.html
+17,COMP474,lab,6,Recommender Systems,,slides,data/COMP/474/Lectures/6/slides/slides06.pdf
+18,SOEN343,tutorial,3,"Object Oriented Paradigm Part I: Overview, OO analysis",,slides,data/SOEN/343/Lectures/3/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
+18,SOEN343,tutorial,3,"Object Oriented Paradigm Part I: Overview, OO analysis",,slides,data/SOEN/343/Lectures/3/tutorial/slides/SOEN 343 - Fall 2020 - Tutorial 1.pdf
+19,SOEN343,Lectures,3,"Object Oriented Paradigm Part I: Overview, OO analysis",18.0,slides,data/SOEN/343/Lectures/3/slides/03b UML Sequence and activity diagrams.pptx
+19,SOEN343,Lectures,3,"Object Oriented Paradigm Part I: Overview, OO analysis",18.0,slides,data/SOEN/343/Lectures/3/slides/03a use cases.pptx
+20,SOEN343,Lectures,12,Distribute architectures,,slides,data/SOEN/343/Lectures/12/slides/12 distributed architecture part II.pptx
+20,SOEN343,Lectures,12,Distribute architectures,,slides,data/SOEN/343/Lectures/12/slides/12 distributed architecture part I.pptx
+21,SOEN343,tutorial,10,Anti-patterns and refactoring,,slides,data/SOEN/343/Lectures/10/tutorial/slides/05 Tutorial anti-patterns.pptx
+22,SOEN343,Lectures,10,Anti-patterns and refactoring,21.0,slides,data/SOEN/343/Lectures/10/slides/10 anti-patterns and refactoring.pptx
+23,SOEN343,Lectures,11,Data-flow and data-centered architectures,,slides,data/SOEN/343/Lectures/11/slides/11 part 2 data-centered architectures.pptx
+23,SOEN343,Lectures,11,Data-flow and data-centered architectures,,slides,data/SOEN/343/Lectures/11/slides/11 data-flow architectures.pptx
+24,SOEN343,tutorial,9,Exception handling,,slides,data/SOEN/343/Lectures/9/tutorial/slides/Tutorial 04 - Exercise - Design Patterns in practice -4.pdf
+25,SOEN343,Lectures,9,Exception handling,24.0,slides,data/SOEN/343/Lectures/9/slides/09 exception_handling.pptx
+26,SOEN343,tutorial,4,"Object Oriented Paradigm Part II: OO design, and design Principles",,solutions,data/SOEN/343/Lectures/4/tutorial/solutions/Tutorial 2 UML diagrams Solutions.docx
+26,SOEN343,tutorial,4,"Object Oriented Paradigm Part II: OO design, and design Principles",,slides,data/SOEN/343/Lectures/4/tutorial/slides/02 Tutorial UML diagrams.pptx
+27,SOEN343,Lectures,4,"Object Oriented Paradigm Part II: OO design, and design Principles",26.0,slides,data/SOEN/343/Lectures/4/slides/04b Object Oriented design OPS case study.pptx
+27,SOEN343,Lectures,4,"Object Oriented Paradigm Part II: OO design, and design Principles",26.0,slides,data/SOEN/343/Lectures/4/slides/04c Object Oriented advanced design principles.pptx
+27,SOEN343,Lectures,4,"Object Oriented Paradigm Part II: OO design, and design Principles",26.0,slides,data/SOEN/343/Lectures/4/slides/04a Object Oriented design.pptx
+28,SOEN343,tutorial,2,Models for Software Architecture,,solutions,data/SOEN/343/Lectures/2/tutorial/solutions/Tutorial 1 solution.docx
+28,SOEN343,tutorial,2,Models for Software Architecture,,slides,data/SOEN/343/Lectures/2/tutorial/slides/01 Tutorial Domain analysis.pptx
+29,SOEN343,Lectures,2,Models for Software Architecture,28.0,slides,data/SOEN/343/Lectures/2/slides/02b domain modeling uml class diagrams.pptx
+29,SOEN343,Lectures,2,Models for Software Architecture,28.0,slides,data/SOEN/343/Lectures/2/slides/02a models for software architecture.pptx
+30,SOEN343,Lectures,1,Course overview. Introduction to Software Engineering,,slides,data/SOEN/343/Lectures/1/slides/01 Introduction to sw architecture.pptx
+31,SOEN343,tutorial,8,Structural design patterns,,slides,data/SOEN/343/Lectures/8/tutorial/slides/04 Tutorial design patterns in the wild.pptx
+32,SOEN343,Lectures,8,Structural design patterns,31.0,slides,data/SOEN/343/Lectures/8/slides/08 structural design_patterns.pptx
+33,SOEN343,Lectures,5,Introduction to design patterns MVC and observer pattern,,slides,data/SOEN/343/Lectures/5/slides/05b mvc and observer pattern.pptx
+33,SOEN343,Lectures,5,Introduction to design patterns MVC and observer pattern,,slides,data/SOEN/343/Lectures/5/slides/05a introduction to design patterns.pptx
+34,SOEN343,Lectures,7,Creational design patterns,,slides,data/SOEN/343/Lectures/7/slides/07 creational design_patterns.pptx
+35,SOEN343,tutorial,6,API documentation Unit Testing,,slides,data/SOEN/343/Lectures/6/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
+36,SOEN343,Lectures,6,API documentation Unit Testing,35.0,slides,data/SOEN/343/Lectures/6/slides/06b unit_testing.pptx
+36,SOEN343,Lectures,6,API documentation Unit Testing,35.0,slides,data/SOEN/343/Lectures/6/slides/06a apidoc_generation.pptx

@@ -1,38 +1,38 @@
 EventID,CourseID,Type,Number,Title
-0,5484,Lectures,3,Vocabularies & Ontologies
-1,5484,lab,3,Vocabularies & Ontologies
-2,5484,Lectures,9,Text Mining Systems
-3,5484,lab,9,Text Mining Systems
-4,5484,Lectures,4,Knowledge Base Queries
-5,5484,lab,4,Knowledge Base Queries
-6,5484,Lectures,2,Knowledge Graphs
-7,5484,lab,2,Knowledge Graphs
-8,5484,lab,1,Introduction to Intelligent Systems
-9,5484,Lectures,1,Introduction to Intelligent Systems
-10,5484,Lectures,8,Intelligent Agents
-11,5484,lab,8,Intelligent Agents
-12,5484,Lectures,5, Linked Open Data & Applications
-13,5484,lab,5, Linked Open Data & Applications
-14,5484,Lectures,7,Introduction to Machine Learning for Intelligent Systems
-15,5484,lab,7,Introduction to Machine Learning for Intelligent Systems
-16,5484,Lectures,6,Recommender Systems
-17,5484,lab,6,Recommender Systems
-18,32010,tutorial,3,"Object Oriented Paradigm Part I: Overview, OO analysis"
-19,32010,Lectures,3,"Object Oriented Paradigm Part I: Overview, OO analysis"
-20,32010,Lectures,12,Distribute architectures
-21,32010,tutorial,10,Anti-patterns and refactoring
-22,32010,Lectures,10,Anti-patterns and refactoring
-23,32010,Lectures,11,Data-flow and data-centered architectures
-24,32010,tutorial,9,Exception handling
-25,32010,Lectures,9,Exception handling
-26,32010,tutorial,4,"Object Oriented Paradigm Part II: OO design, and design Principles"
-27,32010,Lectures,4,"Object Oriented Paradigm Part II: OO design, and design Principles"
-28,32010,tutorial,2,Models for Software Architecture
-29,32010,Lectures,2,Models for Software Architecture
-30,32010,Lectures,1,Course overview. Introduction to Software Engineering
-31,32010,tutorial,8,Structural design patterns
-32,32010,Lectures,8,Structural design patterns
-33,32010,Lectures,5,Introduction to design patterns MVC and observer pattern
-34,32010,Lectures,7,Creational design patterns
-35,32010,tutorial,6,API documentation Unit Testing
-36,32010,Lectures,6,API documentation Unit Testing
+0,COMP474,Lectures,3,Vocabularies & Ontologies
+1,COMP474,lab,3,Vocabularies & Ontologies
+2,COMP474,Lectures,9,Text Mining Systems
+3,COMP474,lab,9,Text Mining Systems
+4,COMP474,Lectures,4,Knowledge Base Queries
+5,COMP474,lab,4,Knowledge Base Queries
+6,COMP474,Lectures,2,Knowledge Graphs
+7,COMP474,lab,2,Knowledge Graphs
+8,COMP474,lab,1,Introduction to Intelligent Systems
+9,COMP474,Lectures,1,Introduction to Intelligent Systems
+10,COMP474,Lectures,8,Intelligent Agents
+11,COMP474,lab,8,Intelligent Agents
+12,COMP474,Lectures,5, Linked Open Data & Applications
+13,COMP474,lab,5, Linked Open Data & Applications
+14,COMP474,Lectures,7,Introduction to Machine Learning for Intelligent Systems
+15,COMP474,lab,7,Introduction to Machine Learning for Intelligent Systems
+16,COMP474,Lectures,6,Recommender Systems
+17,COMP474,lab,6,Recommender Systems
+18,SOEN343,tutorial,3,"Object Oriented Paradigm Part I: Overview, OO analysis"
+19,SOEN343,Lectures,3,"Object Oriented Paradigm Part I: Overview, OO analysis"
+20,SOEN343,Lectures,12,Distribute architectures
+21,SOEN343,tutorial,10,Anti-patterns and refactoring
+22,SOEN343,Lectures,10,Anti-patterns and refactoring
+23,SOEN343,Lectures,11,Data-flow and data-centered architectures
+24,SOEN343,tutorial,9,Exception handling
+25,SOEN343,Lectures,9,Exception handling
+26,SOEN343,tutorial,4,"Object Oriented Paradigm Part II: OO design, and design Principles"
+27,SOEN343,Lectures,4,"Object Oriented Paradigm Part II: OO design, and design Principles"
+28,SOEN343,tutorial,2,Models for Software Architecture
+29,SOEN343,Lectures,2,Models for Software Architecture
+30,SOEN343,Lectures,1,Course overview. Introduction to Software Engineering
+31,SOEN343,tutorial,8,Structural design patterns
+32,SOEN343,Lectures,8,Structural design patterns
+33,SOEN343,Lectures,5,Introduction to design patterns MVC and observer pattern
+34,SOEN343,Lectures,7,Creational design patterns
+35,SOEN343,tutorial,6,API documentation Unit Testing
+36,SOEN343,Lectures,6,API documentation Unit Testing
