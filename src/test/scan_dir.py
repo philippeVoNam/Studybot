@@ -76,7 +76,7 @@ def process_dirs(dirPaths: str, courseDataInfo: {}):
         for file in dataFiles:
             data = file.split("/")
 
-            if data[5] == "tutorial":
+            if data[5] == "tutorial" or data[5] == "lab":
                 courseType = data[1]
                 courseNum = data[2]
                 type_ = data[3]

@@ -31,6 +31,6 @@ dfMaterial.to_csv("df_material.csv", index = False)
 # link events
 eventLinkData = connect_tutorial_lecture_event("df_event.csv")
 
-dfEventLink  = DataFrame(eventLinkData, columns=["LectureEventID" ,"TutorialEventID"])
+dfEventLink  = DataFrame(eventLinkData, columns=["LectureEventID" ,"ExtraEventID"])
 
 dfEventLink.to_csv("df_event_link.csv", index = False)
