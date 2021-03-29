@@ -38,9 +38,8 @@ def get_event_resource(event):
 
 def convert():
     events = read_csv_files()
-    events.to_csv("info.csv", index = False)
-
-    print(events)
+    # events.to_csv("info.csv", index = False)
+    # print(events)
 
     for i, event in events.iterrows():
         event_ref = get_event_resource(event)
@@ -50,8 +49,7 @@ def convert():
         materialType = event["Type_y"]
         materialLink = event["Link"]
 
-        # fix materialLink to be URI compatible
-        materialLink = materialLink.replace(" ","_")
+
 
         if eventType == "Lectures":
             graph.add((
@@ -101,4 +99,4 @@ def convert():
 
 if __name__ == "__main__":
     graph = convert()
-    graph.serialize(destination='output.ttl', format='turtle')
+    graph.serialize(destination='lecture_data.ttl', format='turtle')

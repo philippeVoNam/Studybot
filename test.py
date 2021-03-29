@@ -12,14 +12,14 @@ from pandas import DataFrame
 
 # course id
 courseDataInfo = {
-    "SOEN-343": 32010,
-    "COMP-474": 5484
+    "SOEN-343": "SOEN343",
+    "COMP-474": "COMP474"
 }
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-paths = ["data/COMP", "data/SOEN"]
+paths = ["local_dataset/COMP", "local_dataset/SOEN"]
 coursesEventData, coursesMaterialData = process_dirs(paths, courseDataInfo)
 
 dfEvent = DataFrame(coursesEventData, columns=["EventID" ,"CourseID", "Type", "Number"])

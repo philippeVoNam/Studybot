@@ -1,58 +1,58 @@
 EventID,Type,Link
-0,worksheets,data/COMP/474/Lectures/3/worksheets/worksheet02.pdf
-1,html,data/COMP/474/Lectures/3/lab/html/COMP-474-2204-UU Lab Session #3.html
-1,slides,data/COMP/474/Lectures/3/slides/slides03.pdf
-2,worksheets,data/COMP/474/Lectures/9/worksheets/worksheet08.pdf
-3,html,data/COMP/474/Lectures/9/lab/html/COMP-474-2204-UU Lab Session #9.html
-3,slides,data/COMP/474/Lectures/9/slides/slides09.pdf
-4,worksheets,data/COMP/474/Lectures/4/worksheets/worksheet03.pdf
-5,html,data/COMP/474/Lectures/4/lab/html/COMP-474-2204-UU Lab Session #4.html
-5,slides,data/COMP/474/Lectures/4/slides/slides04.pdf
-6,worksheets,data/COMP/474/Lectures/2/worksheets/worksheet01.pdf
-7,html,data/COMP/474/Lectures/2/lab/html/COMP-474-2204-UU Lab Session #2.html
-7,slides,data/COMP/474/Lectures/2/slides/slides02.pdf
-8,html,data/COMP/474/Lectures/1/lab/html/COMP-474-2204-UU Lab Introduction to Python.html
-8,slides,data/COMP/474/Lectures/1/lab/slides/py_tut.pdf
-9,slides,data/COMP/474/Lectures/1/slides/slides01.pdf
-10,worksheets,data/COMP/474/Lectures/8/worksheets/worksheet07.pdf
-11,html,data/COMP/474/Lectures/8/lab/html/COMP-474-2204-UU Lab Session #8.html
-11,slides,data/COMP/474/Lectures/8/slides/slides08.pdf
-12,worksheets,data/COMP/474/Lectures/5/worksheets/worksheet04.pdf
-13,html,data/COMP/474/Lectures/5/lab/html/COMP-474-2204-UU Lab Session #5.html
-13,slides,data/COMP/474/Lectures/5/slides/slides05.pdf
-14,worksheets,data/COMP/474/Lectures/7/worksheets/worksheet06.pdf
-15,html,data/COMP/474/Lectures/7/lab/html/COMP-474-2204-UU Lab Session #7.html
-15,slides,data/COMP/474/Lectures/7/slides/slides07.pdf
-16,worksheets,data/COMP/474/Lectures/6/worksheets/worksheet05.pdf
-17,html,data/COMP/474/Lectures/6/lab/html/COMP-474-2204-UU Lab Session #6.html
-17,slides,data/COMP/474/Lectures/6/slides/slides06.pdf
-18,slides,data/SOEN/343/Lectures/3/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
-18,slides,data/SOEN/343/Lectures/3/tutorial/slides/SOEN 343 - Fall 2020 - Tutorial 1.pdf
-19,slides,data/SOEN/343/Lectures/3/slides/03b UML Sequence and activity diagrams.pptx
-19,slides,data/SOEN/343/Lectures/3/slides/03a use cases.pptx
-20,slides,data/SOEN/343/Lectures/12/slides/12 distributed architecture part II.pptx
-20,slides,data/SOEN/343/Lectures/12/slides/12 distributed architecture part I.pptx
-21,slides,data/SOEN/343/Lectures/10/tutorial/slides/05 Tutorial anti-patterns.pptx
-22,slides,data/SOEN/343/Lectures/10/slides/10 anti-patterns and refactoring.pptx
-23,slides,data/SOEN/343/Lectures/11/slides/11 part 2 data-centered architectures.pptx
-23,slides,data/SOEN/343/Lectures/11/slides/11 data-flow architectures.pptx
-24,slides,data/SOEN/343/Lectures/9/tutorial/slides/Tutorial 04 - Exercise - Design Patterns in practice -4.pdf
-25,slides,data/SOEN/343/Lectures/9/slides/09 exception_handling.pptx
-26,solutions,data/SOEN/343/Lectures/4/tutorial/solutions/Tutorial 2 UML diagrams Solutions.docx
-26,slides,data/SOEN/343/Lectures/4/tutorial/slides/02 Tutorial UML diagrams.pptx
-27,slides,data/SOEN/343/Lectures/4/slides/04b Object Oriented design OPS case study.pptx
-27,slides,data/SOEN/343/Lectures/4/slides/04c Object Oriented advanced design principles.pptx
-27,slides,data/SOEN/343/Lectures/4/slides/04a Object Oriented design.pptx
-28,solutions,data/SOEN/343/Lectures/2/tutorial/solutions/Tutorial 1 solution.docx
-28,slides,data/SOEN/343/Lectures/2/tutorial/slides/01 Tutorial Domain analysis.pptx
-29,slides,data/SOEN/343/Lectures/2/slides/02b domain modeling uml class diagrams.pptx
-29,slides,data/SOEN/343/Lectures/2/slides/02a models for software architecture.pptx
-30,slides,data/SOEN/343/Lectures/1/slides/01 Introduction to sw architecture.pptx
-31,slides,data/SOEN/343/Lectures/8/tutorial/slides/04 Tutorial design patterns in the wild.pptx
-32,slides,data/SOEN/343/Lectures/8/slides/08 structural design_patterns.pptx
-33,slides,data/SOEN/343/Lectures/5/slides/05b mvc and observer pattern.pptx
-33,slides,data/SOEN/343/Lectures/5/slides/05a introduction to design patterns.pptx
-34,slides,data/SOEN/343/Lectures/7/slides/07 creational design_patterns.pptx
-35,slides,data/SOEN/343/Lectures/6/tutorial/slides/03 Tutorial Object-oriented design and design principles.pptx
-36,slides,data/SOEN/343/Lectures/6/slides/06b unit_testing.pptx
-36,slides,data/SOEN/343/Lectures/6/slides/06a apidoc_generation.pptx
+0,worksheets,local_dataset/COMP/474/Lectures/3/worksheets/worksheet02.pdf
+1,html,local_dataset/COMP/474/Lectures/3/lab/html/COMP-474-2204-UU_Lab_Session_#3.html
+1,slides,local_dataset/COMP/474/Lectures/3/slides/slides03.pdf
+2,worksheets,local_dataset/COMP/474/Lectures/9/worksheets/worksheet08.pdf
+3,html,local_dataset/COMP/474/Lectures/9/lab/html/COMP-474-2204-UU_Lab_Session_#9.html
+3,slides,local_dataset/COMP/474/Lectures/9/slides/slides09.pdf
+4,worksheets,local_dataset/COMP/474/Lectures/4/worksheets/worksheet03.pdf
+5,html,local_dataset/COMP/474/Lectures/4/lab/html/COMP-474-2204-UU_Lab_Session_#4.html
+5,slides,local_dataset/COMP/474/Lectures/4/slides/slides04.pdf
+6,worksheets,local_dataset/COMP/474/Lectures/2/worksheets/worksheet01.pdf
+7,html,local_dataset/COMP/474/Lectures/2/lab/html/COMP-474-2204-UU_Lab_Session_#2.html
+7,slides,local_dataset/COMP/474/Lectures/2/slides/slides02.pdf
+8,html,local_dataset/COMP/474/Lectures/1/lab/html/COMP-474-2204-UU_Lab_Introduction_to_Python.html
+8,slides,local_dataset/COMP/474/Lectures/1/lab/slides/py_tut.pdf
+9,slides,local_dataset/COMP/474/Lectures/1/slides/slides01.pdf
+10,worksheets,local_dataset/COMP/474/Lectures/8/worksheets/worksheet07.pdf
+11,html,local_dataset/COMP/474/Lectures/8/lab/html/COMP-474-2204-UU_Lab_Session_#8.html
+11,slides,local_dataset/COMP/474/Lectures/8/slides/slides08.pdf
+12,worksheets,local_dataset/COMP/474/Lectures/5/worksheets/worksheet04.pdf
+13,html,local_dataset/COMP/474/Lectures/5/lab/html/COMP-474-2204-UU_Lab_Session_#5.html
+13,slides,local_dataset/COMP/474/Lectures/5/slides/slides05.pdf
+14,worksheets,local_dataset/COMP/474/Lectures/7/worksheets/worksheet06.pdf
+15,html,local_dataset/COMP/474/Lectures/7/lab/html/COMP-474-2204-UU_Lab_Session_#7.html
+15,slides,local_dataset/COMP/474/Lectures/7/slides/slides07.pdf
+16,worksheets,local_dataset/COMP/474/Lectures/6/worksheets/worksheet05.pdf
+17,html,local_dataset/COMP/474/Lectures/6/lab/html/COMP-474-2204-UU_Lab_Session_#6.html
+17,slides,local_dataset/COMP/474/Lectures/6/slides/slides06.pdf
+18,slides,local_dataset/SOEN/343/Lectures/3/tutorial/slides/SOEN_343_-_Fall_2020_-_Tutorial_1.pdf
+18,slides,local_dataset/SOEN/343/Lectures/3/tutorial/slides/03_Tutorial_Object-oriented_design_and_design_principles.pptx
+19,slides,local_dataset/SOEN/343/Lectures/3/slides/03a_use_cases.pptx
+19,slides,local_dataset/SOEN/343/Lectures/3/slides/03b_UML_Sequence_and_activity_diagrams.pptx
+20,slides,local_dataset/SOEN/343/Lectures/12/slides/12_distributed_architecture_part_I.pptx
+20,slides,local_dataset/SOEN/343/Lectures/12/slides/12_distributed_architecture_part_II.pptx
+21,slides,local_dataset/SOEN/343/Lectures/10/tutorial/slides/05_Tutorial_anti-patterns.pptx
+22,slides,local_dataset/SOEN/343/Lectures/10/slides/10_anti-patterns_and_refactoring.pptx
+23,slides,local_dataset/SOEN/343/Lectures/11/slides/11_data-flow_architectures.pptx
+23,slides,local_dataset/SOEN/343/Lectures/11/slides/11_part_2_data-centered_architectures.pptx
+24,slides,local_dataset/SOEN/343/Lectures/9/tutorial/slides/Tutorial_04_-_Exercise_-_Design_Patterns_in_practice_-4.pdf
+25,slides,local_dataset/SOEN/343/Lectures/9/slides/09_exception_handling.pptx
+26,solutions,local_dataset/SOEN/343/Lectures/4/tutorial/solutions/Tutorial_2_UML_diagrams_Solutions.docx
+26,slides,local_dataset/SOEN/343/Lectures/4/tutorial/slides/02_Tutorial_UML_diagrams.pptx
+27,slides,local_dataset/SOEN/343/Lectures/4/slides/04c_Object_Oriented_advanced_design_principles.pptx
+27,slides,local_dataset/SOEN/343/Lectures/4/slides/04a_Object_Oriented_design.pptx
+27,slides,local_dataset/SOEN/343/Lectures/4/slides/04b_Object_Oriented_design_OPS_case_study.pptx
+28,solutions,local_dataset/SOEN/343/Lectures/2/tutorial/solutions/Tutorial_1_solution.docx
+28,slides,local_dataset/SOEN/343/Lectures/2/tutorial/slides/01_Tutorial_Domain_analysis.pptx
+29,slides,local_dataset/SOEN/343/Lectures/2/slides/02a_models_for_software_architecture.pptx
+29,slides,local_dataset/SOEN/343/Lectures/2/slides/02b_domain_modeling_uml_class_diagrams.pptx
+30,slides,local_dataset/SOEN/343/Lectures/1/slides/01_Introduction_to_sw_architecture.pptx
+31,slides,local_dataset/SOEN/343/Lectures/8/tutorial/slides/04_Tutorial_design_patterns_in_the_wild.pptx
+32,slides,local_dataset/SOEN/343/Lectures/8/slides/08_structural_design_patterns.pptx
+33,slides,local_dataset/SOEN/343/Lectures/5/slides/05a_introduction_to_design_patterns.pptx
+33,slides,local_dataset/SOEN/343/Lectures/5/slides/05b_mvc_and_observer_pattern.pptx
+34,slides,local_dataset/SOEN/343/Lectures/7/slides/07_creational_design_patterns.pptx
+35,slides,local_dataset/SOEN/343/Lectures/6/tutorial/slides/03_Tutorial_Object-oriented_design_and_design_principles.pptx
+36,slides,local_dataset/SOEN/343/Lectures/6/slides/06b_unit_testing.pptx
+36,slides,local_dataset/SOEN/343/Lectures/6/slides/06a_apidoc_generation.pptx
