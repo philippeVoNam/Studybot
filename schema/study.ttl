@@ -89,3 +89,10 @@
   rdf:comment "Relates a course event to a course"@en ;
   rdfs:domain teach:Course ;
   rdfs:range <CourseEvent> ;
+
+<eventNumber>
+  rdf:type rdfs:Property ;
+  rdf:label "event number"@en ;
+  rdf:comment "The ordinal number of the event in the course sequence"@en;
+  rdfs:domain study:CourseEvent ;
+  rdfs:range xsd:integer .

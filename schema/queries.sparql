@@ -1,0 +1,55 @@
+# Q1 What is course [courseTitle] about?
+SELECT ?topic WHERE {
+  ?course teach:courseTitle ?courseTitle ;
+  ?course foaf:topic ?topic .
+}
+
+
+# Q2 What topics were covered in the [ordinal] [courseEventType] in [courseTitle]?
+SELECT ?topic WHERE {
+  ?course teach:courseTitle ?courseTitle ;
+  ?course study:courseEvent ?courseEvent ;
+  ?courseEvent rdf:type ?courseEventType ; # Where ?courseEventType is one of: study:Lecture, study:Tutorial, study:Lab
+  ?courseEvent study:eventNumber ?ordinal ;
+  ?courseEvent foaf:topic ?topic .
+}
+
+# Q3 Which courses at [universityName] teach [topic]?
+SELECT ?course WHERE {
+  ?university foaf:name ?universityName ;
+  ?university aiiso:teaches ?course ;
+  ?course rdf:type teach:Course ;
+  ?course foaf:topic ?topic .
+}
+
+# Q6 What is the name of course [courseSubject][courseNumber] at [university]?
+SELECT ?name WHERE {
+  ?course rdf:type teach:Course ;
+  ?university aiiso:teaches ?course ;
+  ?course study:courseSubject ?courseSubject ;
+  ?course study:courseNumber ?courseNumber ;
+  ?course teach:courseTitle ?name .
+}
+
+# Q7 Which courses require [courseEventType] at [university]?
+SELECT ?course WHERE {
+  ?course rdf:type teach:Course ;
+  ?university aiiso:teaches ?course ;
+  ?course study:hasCourseEvent ?event ;
+  ?event rdf:type ?courseEventType . # Where ?courseEventType is one of: study:Lecture, study:Tutorial, study:Lab
+}
+
+# Q9 Where is/are the [materialType] for [ordinal] [courseEventType] in [course]?
+SELECT ?material ?resource WHERE {
+  ?course study:hasCourseEvent ?event ;
+  ?event rdf:type ?courseEventType ;
+  ?event study:eventNumber ?ordinal ;
+  ?event study:hasMaterial ?material ;
+  ?material rdf:type ?materialType ;
+  ?material rdf:resource ?resource .
+}
+
+# Q10 Where can I find more information for [thing] ?
+SELECT ?seeAlso WHERE {
+  ?thing rdf:seeAlso ?seeAlso .
+}

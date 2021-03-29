@@ -45,7 +45,9 @@ def convert():
 
         see_also = course['See Also']
         outline = course['Outline']
-        
+        topics = course['Topics']
+        print(topics)
+
         if see_also != 'missing':
             graph.add((
                 course_ref, RDFS.seeAlso, URIRef(see_also)

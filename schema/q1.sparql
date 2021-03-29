@@ -1,6 +1,0 @@
-# What is the subject of <course_name>?
-SELECT ?subject WHERE {
-  ?course rdf:type aiiso:Course .
-  ?course foaf:name ?name .
-  ?course study:courseSubject ?subject .
-}
