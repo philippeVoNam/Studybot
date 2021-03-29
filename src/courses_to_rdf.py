@@ -1,4 +1,4 @@
-from graph import graph, STUDYBOT, TEACH, STUDY, RDF, RDFS
+from graph import graph, STUDYBOT, TEACH, STUDY, RDF, RDFS, FOAF
 
 from rdflib import Literal, URIRef, BNode
 
@@ -15,7 +15,7 @@ def get_course_subject(course):
 
 
 def convert():
-    from data import courses
+    from data import courses, course_topics
 
     courses['See Also'] = courses['See Also'].fillna('missing')
     courses['Outline'] = courses['Outline'].fillna('missing')
@@ -45,8 +45,12 @@ def convert():
 
         see_also = course['See Also']
         outline = course['Outline']
-        topics = course['Topics']
-        print(topics)
+        topics = list(course_topics[course_topics['Course ID'] == course['Course ID']].values)
+
+        for topic in topics:
+            graph.add((
+                course_ref, FOAF.topic, URIRef(topic)
+            ))
 
         if see_also != 'missing':
             graph.add((
