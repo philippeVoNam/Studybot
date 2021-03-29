@@ -39,7 +39,6 @@ def scan_dir(dirPath: str):
             print(dest)
             print("---")
             
-            os.rename(src, dest)
 
     return dataDirectories, dataFiles
 
