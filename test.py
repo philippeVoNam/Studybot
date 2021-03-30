@@ -10,10 +10,15 @@ from pandas import DataFrame
 
 # * Code
 
+""" 
+"005484","","" COMP474
+"032010","","" SOEN343
+"""
+
 # course id
 courseDataInfo = {
-    "SOEN-343": "SOEN343",
-    "COMP-474": "COMP474"
+    "SOEN-343": 5484,
+    "COMP-474": 32010
 }
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
