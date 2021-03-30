@@ -15,6 +15,10 @@ Run the `generate.py` file to generate the graph. The script accepts command-lin
 python generate.py --help
 ```
 
+Make sure to correctly specify the path to the local data directory.
+
+NOTE: If different values are used for the base and schema options, then the provided queries may not function correctly.
+
 ## Queries
 
 To run the queries:
