@@ -22,8 +22,6 @@ def convert(events):
         materialType = event["Type_y"]
         materialLink = event["Link"]
 
-
-
         if eventType == "Lectures":
             graph.add((
                 event_ref, RDF.type, STUDY.Lecture
