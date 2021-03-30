@@ -13,10 +13,16 @@ def get_event_resource(event):
     number = event['Number']
     return STUDYBOT[f'{courseTitle}_{type_x}_{number}']
 
-def convert(events):
+def get_course_resource(course):
+    subj = course['Subject']
+    cat = course['Catalog']
+    return STUDYBOT[f'{subj}-{cat}']
+
+def convert(events, courses):
     for i, event in events.iterrows():
         event_ref = get_event_resource(event)
         eventType = event["Type_x"]
+        eventCourseID = event["CourseID"]
         eventNumber = event["Number"]
         eventTitle = event["Title"]
         materialType = event["Type_y"]
@@ -64,6 +70,18 @@ def convert(events):
         ))
         graph.add((
             event_ref, STUDY.hasMaterial, material_node
+        ))
+
+        # adding the course events to the course nodes
+        for i, course in courses.iterrows():
+
+            if courses["Course ID"] == eventCourseID:
+                targetCourse = course
+
+        course_ref = get_course_resource(targetCourse)
+
+        graph.add((
+            course_ref, STUDY.hasCourseEvent, event_ref
         ))
 
     return graph
