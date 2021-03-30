@@ -8,11 +8,11 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT ?materialType ?resource WHERE {
+SELECT ?resource WHERE {
   ?course study:courseEvent ?event .
-  ?event rdf:type ?courseEventType .
-  ?event study:eventNumber ?ordinal .
+  ?event rdf:type study:Lecture .
+  ?event study:eventNumber 3 .
   ?event study:hasMaterial ?material .
-  ?material rdf:type ?materialType .
+  ?material rdf:type study:Slides .
   ?material rdf:resource ?resource .
 }
