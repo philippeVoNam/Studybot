@@ -1,4 +1,4 @@
 class Config:
-    base_url = 'http://www.example.org'
-    schema_file = './schemas/study.ttl'
+    base_url = 'file:///data/'
+    schema_file = 'file:///schema/study.ttl/'
     data_dir = './data'

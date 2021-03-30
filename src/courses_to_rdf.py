@@ -1,3 +1,4 @@
+import os
 from graph import graph, STUDYBOT, TEACH, AIISO, STUDY, RDF, RDFS, FOAF
 
 from rdflib import Literal, URIRef, BNode
@@ -66,6 +67,9 @@ def convert(courses, course_topics):
                 course_ref, RDFS.seeAlso, URIRef(see_also)
             ))
         if outline != 'missing':
+            if not outline.startswith('http'):
+                outline = os.path.join('file:///', outline)
+
             outline_node = BNode()
             graph.add((
                 outline_node, RDF.type, STUDY.CourseOutline

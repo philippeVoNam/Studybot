@@ -9,8 +9,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('out', type=str)
     parser.add_argument('--data', default="./data", type=str, help="path to the data files")
-    parser.add_argument('--schema', type=str, default="file:///./schema/study.ttl/", help="path to the STUDY schema")
-    parser.add_argument('--base', type=str, default="file:///./data/", help="base to use for STUDYBOT URIs")
+    parser.add_argument('--schema', type=str, default="file:///schema/study.ttl/", help="path to the STUDY schema")
+    parser.add_argument('--base', type=str, default="file:///data/", help="base to use for STUDYBOT URIs")
     parser.add_argument('--format', default='ntriples', type=str, help="serialization format for the graph")
     args = parser.parse_args()
 

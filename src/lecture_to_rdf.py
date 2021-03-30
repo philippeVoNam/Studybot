@@ -4,7 +4,11 @@
 from pathlib import Path
 from rdflib import Literal, URIRef, BNode
 
+import os
+
 from graph import graph, STUDYBOT, STUDY, RDF, FOAF
+
+from courses_to_rdf import get_course_resource
 
 
 def get_event_resource(event):
@@ -13,10 +17,6 @@ def get_event_resource(event):
     number = event['Number']
     return STUDYBOT[f'{courseTitle}_{type_x}_{number}']
 
-def get_course_resource(course):
-    subj = course['Subject']
-    cat = course['Catalog']
-    return STUDYBOT[f'{subj}-{cat}']
 
 def convert(events, courses, course_topics):
     for i, event in events.iterrows():
@@ -27,6 +27,9 @@ def convert(events, courses, course_topics):
         eventTitle = event["Title"]
         materialType = event["Type_y"]
         materialLink = event["Link"]
+
+        if not materialLink.startswith('http'):
+            materialLink = os.path.join('file:///', materialLink)
 
         if eventType == "Lectures":
             graph.add((
@@ -79,18 +82,12 @@ def convert(events, courses, course_topics):
                 event_ref, FOAF.topic, URIRef(topic)
             ))
 
-        # adding the course events to the course nodes
-        # FIXME : for sure it can be done more efficiently
-        # FIXME : instead of doing from the event side, it would be more efficient to do it on the course side
-        for i, course in courses.iterrows():
+        course = courses[courses['Course ID'] == eventCourseID].iloc[0]
+        course_ref = get_course_resource(course)
 
-            if course["Course ID"] == eventCourseID:
-                targetCourse = course
+        graph.add((
+            course_ref, STUDY.hasCourseEvent, event_ref
+        ))
 
-                course_ref = get_course_resource(targetCourse)
-
-                graph.add((
-                    course_ref, STUDY.hasCourseEvent, event_ref
-                ))
 
     return graph

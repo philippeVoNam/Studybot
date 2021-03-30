@@ -1,5 +1,5 @@
-PREFIX study: <file:///./schema/study.ttl/>
-PREFIX studybot: <file:///./data/>
+PREFIX study: <file:///schema/study.ttl/>
+PREFIX studybot: <file:///data/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -8,7 +8,7 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT COUNT(?course) WHERE {
+SELECT (COUNT(?course) AS ?count) WHERE {
   ?university foaf:name "Concordia University"@en .
   ?university aiiso:teaches ?course .
   ?course rdf:type teach:Course .
