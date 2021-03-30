@@ -9,5 +9,5 @@ PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?seeAlso WHERE {
-  ?thing rdf:seeAlso ?seeAlso .
+  studybot:COMP-474 rdfs:seeAlso ?seeAlso .
 }

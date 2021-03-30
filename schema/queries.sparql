@@ -35,13 +35,13 @@ SELECT ?name WHERE {
 SELECT ?course WHERE {
   ?course rdf:type teach:Course ;
   ?university aiiso:teaches ?course ;
-  ?course study:hasCourseEvent ?event ;
+  ?course study:courseEvent ?event ;
   ?event rdf:type ?courseEventType . # Where ?courseEventType is one of: study:Lecture, study:Tutorial, study:Lab
 }
 
 # Q9 Where is/are the [materialType] for [ordinal] [courseEventType] in [course]?
 SELECT ?material ?resource WHERE {
-  ?course study:hasCourseEvent ?event ;
+  ?course study:courseEvent ?event ;
   ?event rdf:type ?courseEventType ;
   ?event study:eventNumber ?ordinal ;
   ?event study:hasMaterial ?material ;

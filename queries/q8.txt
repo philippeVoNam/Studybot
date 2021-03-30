@@ -8,8 +8,9 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT ?outline WHERE {
-  ?course teach:courseTitle ?courseTitle .
-  ?course teach:hasMaterial ?material .
-  ?material rdfs:seeAlso ?outline .
+SELECT DISTINCT ?outline WHERE {
+  ?course teach:courseTitle "Intelligent Systems"@en .
+  ?course teach:hasCourseMaterial ?material .
+  ?material rdf:type study:CourseOutline .
+  ?material rdf:resource ?outline .
 }

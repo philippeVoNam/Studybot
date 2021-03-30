@@ -23,7 +23,7 @@ def convert(events, courses, course_topics):
         event_ref = get_event_resource(event)
         eventType = event["Type_x"]
         eventCourseID = event["CourseID"]
-        eventNumber = event["Number"]
+        eventNumber = int(event["Number"])
         eventTitle = event["Title"]
         materialType = event["Type_y"]
         materialLink = event["Link"]
@@ -86,7 +86,7 @@ def convert(events, courses, course_topics):
         course_ref = get_course_resource(course)
 
         graph.add((
-            course_ref, STUDY.hasCourseEvent, event_ref
+            course_ref, STUDY.courseEvent, event_ref
         ))
 
 

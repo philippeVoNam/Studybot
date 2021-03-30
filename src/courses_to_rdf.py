@@ -66,6 +66,7 @@ def convert(courses, course_topics):
             graph.add((
                 course_ref, RDFS.seeAlso, URIRef(see_also)
             ))
+
         if outline != 'missing':
             if not outline.startswith('http'):
                 outline = os.path.join('file:///', outline)
