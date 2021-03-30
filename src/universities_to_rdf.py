@@ -18,6 +18,9 @@ def convert():
             uni_resource, FOAF.name, Literal(name, lang='en')
         ))
         graph.add((
+            uni_resource, RDF.label, Literal(name, lang='en')
+        ))
+        graph.add((
             uni_resource, OWL.sameAs, same_as_resource
         ))
 

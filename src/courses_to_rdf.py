@@ -1,4 +1,4 @@
-from graph import graph, STUDYBOT, TEACH, STUDY, RDF, RDFS, FOAF
+from graph import graph, STUDYBOT, TEACH, AIISO, STUDY, RDF, RDFS, FOAF
 
 from rdflib import Literal, URIRef, BNode
 
@@ -20,6 +20,8 @@ def convert():
     courses['See Also'] = courses['See Also'].fillna('missing')
     courses['Outline'] = courses['Outline'].fillna('missing')
 
+    concordia = STUDYBOT.concordia_university
+
     for i, course in courses.iterrows():
         course_ref = get_course_resource(course)
         subj = get_course_subject(course)
@@ -31,10 +33,19 @@ def convert():
             course_ref, RDF.type, TEACH.Course
         ))
         graph.add((
+            concordia, AIISO.teaches, course_ref
+        ))
+        graph.add((
             course_ref, TEACH.courseTitle, Literal(title, lang='en')
         ))
         graph.add((
+            course_ref, RDF.label, Literal(title, lang='en')
+        ))
+        graph.add((
             course_ref, TEACH.courseDescription, Literal(desc, lang='en')
+        ))
+        graph.add((
+            course_ref, RDF.comment, Literal(desc, lang='en')
         ))
         graph.add((
             course_ref, STUDY.courseSubject, subj

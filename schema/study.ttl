@@ -22,7 +22,7 @@
   rdf:comment "The subject of a course (i.e COMP, ENCS, etc..)"@en ;
   rdfs:domain teach:Course ;
   rdfs:range aiiso:Subject .
-
+  
 <CourseOutline>
   rdf:type rdfs:Class ;
   rdfs:subClassOf teach:Material ;
