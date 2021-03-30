@@ -3,11 +3,12 @@ import os
 from rdflib import Namespace, Graph
 from rdflib.namespace import OWL, FOAF, RDF, RDFS
 
-from constants import SCHEMA_DIR
+from config import Config
 
-
-STUDYBOT = Namespace('http://www.example.org/')
-STUDY = Namespace(os.path.join('file:///', SCHEMA_DIR, 'study.ttl'))
+STUDYBOT = Namespace(
+    Config.base_url)
+STUDY = Namespace(
+    Config.schema_file)
 TEACH = Namespace('http://linkedscience.org/teach/ns#')
 AIISO = Namespace('http://purl.org/vocab/aiiso/schema#')
 ICAL = Namespace('http://www.w3.org/2002/12/cal#')

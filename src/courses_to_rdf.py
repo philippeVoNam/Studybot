@@ -14,9 +14,7 @@ def get_course_subject(course):
     return STUDYBOT[subj] # <http://www.example.org/SUBJ>
 
 
-def convert():
-    from data import courses, course_topics
-
+def convert(courses, course_topics):
     courses['See Also'] = courses['See Also'].fillna('missing')
     courses['Outline'] = courses['Outline'].fillna('missing')
 
@@ -39,13 +37,13 @@ def convert():
             course_ref, TEACH.courseTitle, Literal(title, lang='en')
         ))
         graph.add((
-            course_ref, RDF.label, Literal(title, lang='en')
+            course_ref, RDFS.label, Literal(title, lang='en')
         ))
         graph.add((
             course_ref, TEACH.courseDescription, Literal(desc, lang='en')
         ))
         graph.add((
-            course_ref, RDF.comment, Literal(desc, lang='en')
+            course_ref, RDFS.comment, Literal(desc, lang='en')
         ))
         graph.add((
             course_ref, STUDY.courseSubject, subj
@@ -56,7 +54,7 @@ def convert():
 
         see_also = course['See Also']
         outline = course['Outline']
-        topics = list(course_topics[course_topics['Course ID'] == course['Course ID']].values)
+        topics = list(course_topics[course_topics['Course ID'] == course['Course ID']]['Topic'])
 
         for topic in topics:
             graph.add((
@@ -78,9 +76,3 @@ def convert():
             graph.add((
                 course_ref, TEACH.hasCourseMaterial, outline_node
             ))
-
-
-if __name__ == "__main__":
-    convert()
-    
-    print(graph.serialize(format='turtle').decode('utf-8'))

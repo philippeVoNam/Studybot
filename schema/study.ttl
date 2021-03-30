@@ -10,89 +10,89 @@
 <courseNumber>
   rdf:type rdfs:Property ;
   rdfs:subPropertyOf aiiso:code ;
-  rdf:label "Course Number"@en ;
-  rdf:comment "The course number with in a subject"@en ;
+  rdfs:label "Course Number"@en ;
+  rdfs:comment "The course number with in a subject"@en ;
   rdfs:domain teach:Course ;
   rdfs:range xsd:string .
 
 <courseSubject>
   rdf:type rdfs:Property ;
   rdfs:subPropertyOf aiiso:knowledgeGrouping ;
-  rdf:label "Course Subject"@en ;
-  rdf:comment "The subject of a course (i.e COMP, ENCS, etc..)"@en ;
+  rdfs:label "Course Subject"@en ;
+  rdfs:comment "The subject of a course (i.e COMP, ENCS, etc..)"@en ;
   rdfs:domain teach:Course ;
   rdfs:range aiiso:Subject .
   
 <CourseOutline>
   rdf:type rdfs:Class ;
   rdfs:subClassOf teach:Material ;
-  rdf:label "Course Outline"@en ;
-  rdf:comment "A document outlining a course by providing useful information, such as: instructor contact information, lecture schedule, grading scheme, required reading, etc..."@en ;
+  rdfs:label "Course Outline"@en ;
+  rdfs:comment "A document outlining a course by providing useful information, such as: instructor contact information, lecture schedule, grading scheme, required reading, etc..."@en ;
   . 
 
 <Slides>
   rdf:type rdfs:Class ;
   rdfs:subClassOf teach:Material ;
-  rdf:label "Slides"@en ;
-  rdf:comment "Describes the presentation slides used for a course event."@en ;
+  rdfs:label "Slides"@en ;
+  rdfs:comment "Describes the presentation slides used for a course event."@en ;
   .
 
 <Reading>
   rdf:type rdfs:Class ;
   rdfs:subClassOf teach:Material ;
-  rdf:label "Reading"@en ;
-  rdf:comment "Describes required or optional reading for a course event."@en ;
+  rdfs:label "Reading"@en ;
+  rdfs:comment "Describes required or optional reading for a course event."@en ;
   .
   
 <Worksheet>
   rdf:type rdfs:Class ;
   rdfs:subClassOf teach:Material ;
-  rdf:label "Worksheet"@en ;
-  rdf:comment "Describes a worksheet for a course event."@en .
+  rdfs:label "Worksheet"@en ;
+  rdfs:comment "Describes a worksheet for a course event."@en .
 
 <hasMaterial>
   rdf:type rdfs:Property ;
-  rdf:label "has material"@en ;
-  rdf:comment "Links some required or optional material to a course event."@en ;
+  rdfs:label "has material"@en ;
+  rdfs:comment "Links some required or optional material to a course event."@en ;
   rdfs:domain <CourseEvent> ;
   rdfs:range teach:Material .
 
 <CourseEvent>
   rdf:type rdfs:Class ;
   rdfs:subClassOf ical:Vevent ;
-  rdf:label "Course Event"@en ;
-  rdf:comment "An event related to a course such as a lecture, tutorial, or lab"@en .
+  rdfs:label "Course Event"@en ;
+  rdfs:comment "An event related to a course such as a lecture, tutorial, or lab"@en .
 
 <Lecture>
   rdf:type rdfs:Class ;
   rdfs:subClassOf <CourseEvent> ;
-  rdf:label "Lecture"@en ;
-  rdf:comment "A lecture where the professors explains the course content."@en ;
+  rdfs:label "Lecture"@en ;
+  rdfs:comment "A lecture where the professors explains the course content."@en ;
   rdf:seeAlso teach:Lecture ;
 
 <Tutorial>
   rdf:type rdfs:Class ;
   rdfs:subClassOf <CourseEvent> ;
-  rdf:label "Tutorial"@en ;
-  rdf:comment "A tutorial is usually taught by a TA where students can explore the course content in greater depth."@en ;
+  rdfs:label "Tutorial"@en ;
+  rdfs:comment "A tutorial is usually taught by a TA where students can explore the course content in greater depth."@en ;
 
 <Lab>
   rdf:type rdfs:Class ;
   rdfs:subClassOf <CourseEvent> ;
-  rdf:label "Lab"@en ;
-  rdf:comment "A hands-on event where students are given tasks to complete related to the recent lectures"@en ;
+  rdfs:label "Lab"@en ;
+  rdfs:comment "A hands-on event where students are given tasks to complete related to the recent lectures"@en ;
 
 <hasCourseEvent>
   rdf:type rdfs:Property ;
   rdfs:subPropertyOf teach:arrangedAt ;
-  rdf:label "course event"@en ;
-  rdf:comment "Relates a course event to a course"@en ;
+  rdfs:label "course event"@en ;
+  rdfs:comment "Relates a course event to a course"@en ;
   rdfs:domain teach:Course ;
   rdfs:range <CourseEvent> ;
 
 <eventNumber>
   rdf:type rdfs:Property ;
-  rdf:label "event number"@en ;
-  rdf:comment "The ordinal number of the event in the course sequence"@en;
+  rdfs:label "event number"@en ;
+  rdfs:comment "The ordinal number of the event in the course sequence"@en;
   rdfs:domain study:CourseEvent ;
   rdfs:range xsd:integer .

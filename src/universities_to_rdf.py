@@ -1,10 +1,10 @@
-from graph import graph, RDF, OWL, FOAF, VIVO, STUDYBOT
-from data import universities
+from graph import graph, RDF, RDFS, OWL, FOAF, VIVO, STUDYBOT
 from util import to_snake_case
 
 from rdflib import URIRef, Literal
 
-def convert():
+
+def convert(universities):
     for i, row in universities.iterrows():
         name = row['Name']
         sameAs = row['Same As']
@@ -18,15 +18,8 @@ def convert():
             uni_resource, FOAF.name, Literal(name, lang='en')
         ))
         graph.add((
-            uni_resource, RDF.label, Literal(name, lang='en')
+            uni_resource, RDFS.label, Literal(name, lang='en')
         ))
         graph.add((
             uni_resource, OWL.sameAs, same_as_resource
         ))
-
-if __name__ == "__main__":
-    convert()
-
-    print(
-        graph.serialize(format='turtle').decode('utf-8')
-    )
