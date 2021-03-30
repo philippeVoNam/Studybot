@@ -31,10 +31,10 @@ def read_csv_files():
     return lectureDataCSV
 
 def get_event_resource(event):
-    courseID = event['CourseID']
+    courseTitle = event['CourseTitle']
     type_x = event['Type_x']
     number = event['Number']
-    return STUDYBOT[f'{courseID}_{type_x}_{number}']
+    return STUDYBOT[f'{courseTitle}_{type_x}_{number}']
 
 def convert():
     events = read_csv_files()

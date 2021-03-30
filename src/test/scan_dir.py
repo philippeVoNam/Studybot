@@ -32,12 +32,14 @@ def connect_tutorial_lecture_event(csvPath: str):
     df = pd.read_csv(csvPath)
     for index, row in df.iterrows():
         courseID = row["CourseID"]
+        compare_courseTitle = row["CourseTitle"]
         type_ = row["Type"]
         number = row["Number"]
         eventID = row["EventID"]
 
         for index, row in df.iterrows():
             compare_courseID = row["CourseID"]
+            compare_courseTitle = row["CourseTitle"]
             compare_type_ = row["Type"]
             compare_number = row["Number"]
             compare_eventID = row["EventID"]
