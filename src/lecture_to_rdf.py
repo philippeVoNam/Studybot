@@ -73,15 +73,17 @@ def convert(events, courses):
         ))
 
         # adding the course events to the course nodes
+        # FIXME : for sure it can be done more efficiently
+        # FIXME : instead of doing from the event side, it would be more efficient to do it on the course side
         for i, course in courses.iterrows():
 
-            if courses["Course ID"] == eventCourseID:
+            if course["Course ID"] == eventCourseID:
                 targetCourse = course
 
-        course_ref = get_course_resource(targetCourse)
+                course_ref = get_course_resource(targetCourse)
 
-        graph.add((
-            course_ref, STUDY.hasCourseEvent, event_ref
-        ))
+                graph.add((
+                    course_ref, STUDY.hasCourseEvent, event_ref
+                ))
 
     return graph
