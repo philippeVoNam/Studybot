@@ -32,6 +32,6 @@ if __name__ == "__main__":
     courses_to_rdf.convert(courses, course_topics)
     subjects_to_rdf.convert(subjects)
     universities_to_rdf.convert(universities)
-    lecture_to_rdf.convert(events, courses)
+    lecture_to_rdf.convert(events, courses, course_topics)
 
     graph.serialize(args.out, format=args.format)

@@ -18,7 +18,7 @@ def get_course_resource(course):
     cat = course['Catalog']
     return STUDYBOT[f'{subj}-{cat}']
 
-def convert(events, courses):
+def convert(events, courses, course_topics):
     for i, event in events.iterrows():
         event_ref = get_event_resource(event)
         eventType = event["Type_x"]
@@ -71,6 +71,13 @@ def convert(events, courses):
         graph.add((
             event_ref, STUDY.hasMaterial, material_node
         ))
+
+
+        topics = list(course_topics[course_topics['Course ID'] == eventCourseID]['Topic'])
+        for topic in topics:
+            graph.add((
+                event_ref, FOAF.topic, URIRef(topic)
+            ))
 
         # adding the course events to the course nodes
         # FIXME : for sure it can be done more efficiently
