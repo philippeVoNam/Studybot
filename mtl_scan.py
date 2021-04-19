@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     topic_data = []
     error_files = []
-    target_list = ["23","25","34"]
+    target_list = ["23","25","34"] # NOTE : here is the eventIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
     for df_material in df_materials:
         bar.next()
 
