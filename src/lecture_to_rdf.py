@@ -17,8 +17,11 @@ def get_event_resource(event):
     number = event['Number']
     return STUDYBOT[f'{courseTitle}_{type_x}_{number}']
 
+def get_material_topics(material_topics, materialID):
+    topics = list(material_topics[material_topics['MaterialID'] == materialID]['Topic'])
+    return topics
 
-def convert(events, courses, course_topics):
+def convert(events, courses, course_topics, material_topics):
     for i, event in events.iterrows():
         event_ref = get_event_resource(event)
         eventType = event["Type_x"]
@@ -27,6 +30,7 @@ def convert(events, courses, course_topics):
         eventTitle = event["Title"]
         materialType = event["Type_y"]
         materialLink = event["Link"]
+        materialID = event["MaterialID"]
 
         if not materialLink.startswith('http'):
             materialLink = os.path.join('file:///', materialLink)
@@ -71,16 +75,24 @@ def convert(events, courses, course_topics):
         graph.add((
             material_node, RDF.resource, URIRef(materialLink)
         ))
+        
+        # add the topics to the material node
+        topics = get_material_topics(material_topics, materialID)
+        for topic in topics:
+            graph.add((
+                material_node, FOAF.topic, URIRef(topic)
+            ))
+
         graph.add((
             event_ref, STUDY.hasMaterial, material_node
         ))
 
-
-        topics = list(course_topics[course_topics['Course ID'] == eventCourseID]['Topic'])
-        for topic in topics:
-            graph.add((
-                event_ref, FOAF.topic, URIRef(topic)
-            ))
+        # FIXME : should we get rid of this ? (since we already link the topics to the materials itself)
+        # topics = list(course_topics[course_topics['Course ID'] == eventCourseID]['Topic'])
+        # for topic in topics:
+            # graph.add((
+                # event_ref, FOAF.topic, URIRef(topic)
+            # ))
 
         course = courses[courses['Course ID'] == eventCourseID].iloc[0]
         course_ref = get_course_resource(course)

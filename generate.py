@@ -27,11 +27,11 @@ if __name__ == "__main__":
 
     from data import load_data
 
-    universities, subjects, courses, course_topics, events = load_data(args.data)
+    universities, subjects, courses, course_topics, events, material_topics = load_data(args.data)
 
     courses_to_rdf.convert(courses, course_topics)
     subjects_to_rdf.convert(subjects)
     universities_to_rdf.convert(universities)
-    lecture_to_rdf.convert(events, courses, course_topics)
+    lecture_to_rdf.convert(events, courses, course_topics, material_topics)
 
     graph.serialize(args.out, format=args.format)
