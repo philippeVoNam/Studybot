@@ -8,7 +8,7 @@ from progress.bar import Bar
 
 """
 FIXME :
-eventID that did not work : [23,25,34]
+materialID that did not work : [23,25,34]
 """
 
 def read_df_material(filepath):
@@ -19,10 +19,10 @@ def read_df_material(filepath):
 
 def output_2_file(data):
     # cities = pd.DataFrame([['Sacramento', 'California'], ['Miami', 'Florida']], columns=['City', 'State'])
-    cities = pd.DataFrame(data, columns=['EventID', 'Topic'])
+    cities = pd.DataFrame(data, columns=['MaterialID', 'Topic'])
     cities.to_csv('course_material_topics_error.csv', index=False)
 
-def extract_entities(data_str, eventID):
+def extract_entities(data_str, materialID):
     nlp = spacy.blank('en')
     nlp.add_pipe('dbpedia_spotlight')
 
@@ -30,8 +30,8 @@ def extract_entities(data_str, eventID):
 
     data = []
     for ent in doc.ents:
-        if [eventID, ent.kb_id_] not in data:
-            data.append([eventID, ent.kb_id_])
+        if [materialID, ent.kb_id_] not in data:
+            data.append([materialID, ent.kb_id_])
     
     return data
 
@@ -43,20 +43,20 @@ if __name__ == "__main__":
 
     topic_data = []
     error_files = []
-    target_list = ["23","25","34"] # NOTE : here is the eventIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
+    target_list = ["11", "35", "36", "38", "53"] # NOTE : here is the materialIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
     for df_material in df_materials:
         bar.next()
 
         file_ = df_material.split(",")
-        filep = "local_dataset/" + file_[2]
+        filep = "local_dataset/" + file_[3]
         filep = os.path.abspath(filep)
 
-        eventID = file_[0]
+        materialID = file_[2]
 
         my_file = Path(filep.strip())
         filepath = filep.strip()
 
-        if eventID in target_list:
+        if materialID in target_list:
             if my_file.is_file():
                 # opening pdf file
                 parsed= parser.from_file(filepath)
@@ -67,7 +67,7 @@ if __name__ == "__main__":
                 data = parsed['content'] 
                   
             try:
-                data_ents = extract_entities(data, eventID)
+                data_ents = extract_entities(data, materialID)
 
                 topic_data = topic_data + data_ents
 
