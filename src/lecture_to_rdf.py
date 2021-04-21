@@ -22,6 +22,9 @@ def get_material_topics(material_topics, materialID):
     return topics
 
 def convert(events, courses, course_topics, material_topics):
+
+    lectureEventDict = {}
+    tutorial_lab_events = []
     for i, event in events.iterrows():
         event_ref = get_event_resource(event)
         eventType = event["Type_x"]
@@ -33,7 +36,8 @@ def convert(events, courses, course_topics, material_topics):
         materialID = event["MaterialID"]
 
         # FIXME : not sure here
-        extraEventID = event["ExtraEventID"]
+        lectureEventIDLink = event["LectureEventID"]
+        eventID = event["EventID"]
 
         if not materialLink.startswith('http'):
             materialLink = os.path.join('file:///', materialLink)
@@ -43,15 +47,22 @@ def convert(events, courses, course_topics, material_topics):
                 event_ref, RDF.type, STUDY.Lecture
             ))
 
+            lectureEventDict[eventID] = event_ref
+
         elif eventType == "tutorial":
             graph.add((
                 event_ref, RDF.type, STUDY.Tutorial
             ))
 
+            tutorial_lab_events.append(event)
+
+
         elif eventType == "lab":
             graph.add((
                 event_ref, RDF.type, STUDY.Lab
             ))
+
+            tutorial_lab_events.append(event)
 
         graph.add((
             event_ref, FOAF.name, Literal(eventTitle, lang='en')
@@ -104,5 +115,13 @@ def convert(events, courses, course_topics, material_topics):
             course_ref, STUDY.courseEvent, event_ref
         ))
 
+    # make link from tutorial/lab to lecture event
+    for event in tutorial_lab_events:
+        event_ref = get_event_resource(event)
+        lectureEventIDLink = event["LectureEventID"]
+
+        graph.add((
+            event_ref, STUDY.lectureLink, lectureEventDict[lectureEventIDLink]
+        ))
 
     return graph
