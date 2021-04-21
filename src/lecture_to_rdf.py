@@ -32,6 +32,9 @@ def convert(events, courses, course_topics, material_topics):
         materialLink = event["Link"]
         materialID = event["MaterialID"]
 
+        # FIXME : not sure here
+        extraEventID = event["ExtraEventID"]
+
         if not materialLink.startswith('http'):
             materialLink = os.path.join('file:///', materialLink)
 

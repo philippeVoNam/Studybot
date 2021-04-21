@@ -23,6 +23,14 @@
   rdfs:comment "The subject of a course (i.e COMP, ENCS, etc..)"@en ;
   rdfs:domain teach:Course ;
   rdfs:range aiiso:Subject .
+
+<lectureLink>
+  rdf:type rdfs:Property ;
+  rdfs:subPropertyOf aiiso:knowledgeGrouping ;
+  rdfs:label "Lecture Link"@en ;
+  rdfs:comment "The lecture in which the event is connected to"@en ;
+  rdfs:domain study:CourseEvent ;
+  rdfs:range study:Lecture .
   
 <CourseOutline>
   rdf:type rdfs:Class ;
