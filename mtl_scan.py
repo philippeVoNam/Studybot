@@ -11,7 +11,7 @@ FIXME :
 materialID that did not work : [23,25,34]
 """
 
-def read_df_material(filepath):
+def read_CSV(filepath):
     with open(filepath) as f:
         lines = f.readlines()
 
@@ -33,11 +33,10 @@ def extract_entities(data_str, materialID):
         if [materialID, ent.kb_id_] not in data:
             data.append([materialID, ent.kb_id_])
     
-    return data
+    return data, ent.kb_id_
 
-if __name__ == "__main__":
-
-    df_materials = read_df_material("data/lecture_data/df_material.csv")
+def scan():
+    df_materials = read_CSV("data/lecture_data/df_material.csv")
 
     bar = Bar('Processing', max=len(df_materials))
 
@@ -67,7 +66,7 @@ if __name__ == "__main__":
                 data = parsed['content'] 
                   
             try:
-                data_ents = extract_entities(data, materialID)
+                data_ents, ent_topic = extract_entities(data, materialID)
 
                 topic_data = topic_data + data_ents
 
@@ -82,3 +81,37 @@ if __name__ == "__main__":
         print(error_file)
 
     bar.finish()
+
+def stats():
+    topics = read_CSV("data/lecture_data/course_material_topics.csv")
+
+    topics.pop(0)
+    
+    distinct_topics_uri = []
+    comp_topics = []
+    soen_topics = []
+
+    for topic in topics:
+
+        topic = topic.split(",")
+        materialID = int(topic[0])
+        topic_uri = topic[1]
+
+        distinct_topics_uri.append(topic_uri)
+
+        if materialID <= 26:
+            comp_topics.append(topic)
+        else:
+            soen_topics.append(topic)
+
+    print("Total number triples for topics = {}".format(len(topics)))
+
+    distinct_topics_uri = list(dict.fromkeys(distinct_topics_uri))
+    print("Total number of distinct topics = {}".format(len(distinct_topics_uri)))
+
+    print("Total number of topics in COMP-474 = {}".format(len(comp_topics)))
+    print("Total number of topics in SOEN-343 = {}".format(len(soen_topics)))
+
+if __name__ == "__main__":
+    stats()
+
