@@ -42,7 +42,7 @@ def scan():
 
     topic_data = []
     error_files = []
-    target_list = ["11", "35", "36", "38", "53"] # NOTE : here is the materialIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
+    target_list = ["36", "38", "53"] # NOTE : here is the materialIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
     for df_material in df_materials:
         bar.next()
 
@@ -113,5 +113,5 @@ def stats():
     print("Total number of topics in SOEN-343 = {}".format(len(soen_topics)))
 
 if __name__ == "__main__":
-    stats()
+    scan()
 

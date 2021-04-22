@@ -10,7 +10,7 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 PREFIX co: <http://purl.org/ontology/co/core#>
 PREFIX st: <http://ns.inria.fr/sparql-template/>
 
-SELECT ?topic ?label ?courseEventURI ?resourceURI WHERE {
+SELECT ?topic ?label ?events ?resourceURI WHERE {
   ?course teach:courseTitle "Intelligent Systems"@en .
   ?course study:courseEvent ?events .
   ?events study:hasMaterial ?materials .
