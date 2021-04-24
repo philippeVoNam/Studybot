@@ -15,7 +15,7 @@ SELECT ?course (count(1) as ?count) WHERE {
   ?uni aiiso:teaches ?course .
   ?course study:hasCourseEvent ?events .
   ?events study:hasMaterial ?materials .
-  ?materials foaf:topic <http://dbpedia.org/resource/Artificial_intelligence> .
+  ?materials foaf:topic <http://dbpedia.org/resource/Software_engineering> .
 }
 GROUP BY ?course
 ORDER BY DESC(?count)
