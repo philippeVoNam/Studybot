@@ -11,6 +11,6 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 SELECT ?course WHERE {
   ?course rdf:type teach:Course .
   studybot:concordia_university aiiso:teaches ?course .
-  ?course study:courseEvent ?event .
+  ?course study:hasCourseEvent ?event .
   ?event rdf:type study:Tutorial .
 }

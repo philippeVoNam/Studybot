@@ -9,7 +9,7 @@ PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?resource WHERE {
-  ?course study:courseEvent ?event .
+  ?course study:hasCourseEvent ?event .
   ?event rdf:type study:Lecture .
   ?event study:eventNumber 3 .
   ?event study:hasMaterial ?material .

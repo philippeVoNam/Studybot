@@ -45,7 +45,7 @@ def get_course_description(course_subject, course_number):
 def get_event_topics(course_subject, course_number, event, number):
     setQuery(f"""
         SELECT ?topic ?topicLabel WHERE {{
-            studybot:{course_subject}-{course_number} study:courseEvent ?event .
+            studybot:{course_subject}-{course_number} study:hasCourseEvent ?event .
             ?event a study:{event} .
             ?event study:eventNumber {number} .
             ?event study:hasMaterial ?material .
@@ -69,7 +69,7 @@ def get_courses_by_topic(topic):
         SELECT ?courseName WHERE {{
             ?course a teach:Course .
             ?course foaf:name ?courseName .
-            ?course study:courseEvent ?event .
+            ?course study:hasCourseEvent ?event .
             ?event study:hasMaterial ?material .
             ?material foaf:topic ?topic .
             ?topic rdfs:label ?topicLabel .
@@ -125,7 +125,7 @@ def get_courses_by_event(event):
         SELECT ?courseName WHERE {{
             ?course a teach:Course .
             ?course teach:courseTitle ?courseName .
-            ?course study:courseEvent ?event .
+            ?course study:hasCourseEvent ?event .
             ?event a study:{event} .
         }}
     """)
@@ -157,7 +157,7 @@ def get_course_outline_location(course_subject, course_number):
 def get_material_location(course_subject, course_number, event, event_number, material):
     setQuery(f"""
         SELECT ?resource WHERE {{
-            studybot:{course_subject}-{course_number} study:courseEvent ?event .
+            studybot:{course_subject}-{course_number} study:hasCourseEvent ?event .
             ?event a study:{event} .
             ?event study:eventNumber {event_number} .
             ?event study:hasMaterial ?material .
