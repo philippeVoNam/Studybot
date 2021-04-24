@@ -6,7 +6,7 @@ from rdflib import Literal, URIRef, BNode
 
 import os
 
-from graph import graph, STUDYBOT, STUDY, RDF, FOAF
+from graph import graph, STUDYBOT, STUDY, RDF, FOAF, RDFS
 
 from courses_to_rdf import get_course_resource
 
@@ -23,7 +23,7 @@ def get_material_topics(material_topics, materialID):
 
 def get_all_topics(material_topics):
     topics_labels = material_topics[["Topic", "Label"]]
-    distinct_topics_label = list(dict.fromkeys(topics_labels))
+    distinct_topics_label = topics_labels.drop_duplicates()
     return distinct_topics_label
 
 def convert(events, courses, course_topics, material_topics):
@@ -131,9 +131,10 @@ def convert(events, courses, course_topics, material_topics):
 
     # make topic node with label
     all_topics_labels = get_all_topics(material_topics)
-    for topic_label in all_topics_labels:
-        topic = topic_label[0]
-        label = topic_label[1]
+    for i, topic_label in all_topics_labels.iterrows():
+        topic = topic_label["Topic"]
+        label = topic_label["Label"]
+
         graph.add((
             URIRef(topic), RDFS.label, Literal(label, lang='en')
         ))

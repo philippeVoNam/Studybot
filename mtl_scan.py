@@ -176,15 +176,15 @@ def gen_labels():
 
     data = []
     count = 0
-    maxC = 100
+    maxC = 10
     for topic in topics:
         bar.next()
 
         try:
             topic = topic.split(",")
             materialID = int(topic[0])
-            topic_uri = topic[1]
-            label = get_label(topic_uri.strip(), sparql)
+            topic_uri = topic[1].strip()
+            label = get_label(topic_uri, sparql)
 
         except Exception as e:
             label = "NA"
@@ -197,6 +197,10 @@ def gen_labels():
             comp_topics.append(topic)
         else:
             soen_topics.append(topic)
+
+        # count += 1
+        # if count > maxC:
+            # break
             
     bar.finish()
 
