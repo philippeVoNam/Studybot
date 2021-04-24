@@ -386,7 +386,7 @@ MaterialID,Topic,Label
 5,http://dbpedia.org/resource/Aspergillus,Aspergillus
 5,http://dbpedia.org/resource/Research_and_development,Research and development
 5,http://dbpedia.org/resource/Information_security,Information security
-5,"""http://dbpedia.org/resource/Chapter_11",NA
+5,http://dbpedia.org/resource/Chapter_11,NA
 5,http://dbpedia.org/resource/Information_extraction,Information extraction
 5,http://dbpedia.org/resource/Daniel_Jurafsky,Daniel Jurafsky
 5,http://dbpedia.org/resource/Epistle_of_James,Epistle of James
@@ -671,8 +671,8 @@ MaterialID,Topic,Label
 12,http://dbpedia.org/resource/Pound_sterling,Pound sterling
 12,http://dbpedia.org/resource/File_system,File system
 12,http://dbpedia.org/resource/Functional_programming,Functional programming
-12,"""http://dbpedia.org/resource/1",NA
-12,"""http://dbpedia.org/resource/4",NA
+12,http://dbpedia.org/resource/1,NA
+12,http://dbpedia.org/resource/4,NA
 12,http://dbpedia.org/resource/List_comprehension,List comprehension
 12,http://dbpedia.org/resource/National_University_of_Medical_Sciences,National University of Medical Sciences
 12,http://dbpedia.org/resource/Source_code,Source code
@@ -731,7 +731,7 @@ MaterialID,Topic,Label
 13,http://dbpedia.org/resource/Google_Drive,Google Drive
 13,http://dbpedia.org/resource/Tuple,Tuple
 13,http://dbpedia.org/resource/Concatenation,Concatenation
-13,"""http://dbpedia.org/resource/1",NA
+13,http://dbpedia.org/resource/1,NA
 13,http://dbpedia.org/resource/String_instrument,String instrument
 13,http://dbpedia.org/resource/Parsing,Parsing
 13,http://dbpedia.org/resource/Hash_table,Hash table
@@ -1276,7 +1276,7 @@ MaterialID,Topic,Label
 23,http://dbpedia.org/resource/Medicine,Medicine
 23,http://dbpedia.org/resource/Regression_analysis,Regression analysis
 23,http://dbpedia.org/resource/Extrapolation,Extrapolation
-23,"""http://dbpedia.org/resource/Training",NA
+23,http://dbpedia.org/resource/Training,NA
 23,http://dbpedia.org/resource/Inductive_bias,Inductive bias
 23,http://dbpedia.org/resource/Euclidean_vector,Euclidean vector
 23,http://dbpedia.org/resource/Moustache,Moustache
@@ -1511,7 +1511,7 @@ MaterialID,Topic,Label
 28,http://dbpedia.org/resource/Orange_S.A.,Orange S.A.
 28,http://dbpedia.org/resource/Snowdon_station,Snowdon station
 28,http://dbpedia.org/resource/Villa-Maria_station,Villa-Maria station
-28,"""http://dbpedia.org/resource/Saint-Henri",NA
+28,http://dbpedia.org/resource/Saint-Henri,NA
 28,http://dbpedia.org/resource/Lionel-Groulx_station,Lionel-Groulx station
 28,http://dbpedia.org/resource/Atwater_station,Atwater station
 28,http://dbpedia.org/resource/Concordia_University,Concordia University
@@ -1659,7 +1659,7 @@ MaterialID,Topic,Label
 31,http://dbpedia.org/resource/Web_service,Web service
 31,http://dbpedia.org/resource/Location_transparency,Location transparency
 31,http://dbpedia.org/resource/.NET_Framework,.NET Framework
-31,"""http://dbpedia.org/resource/Java_Platform",NA
+31,http://dbpedia.org/resource/Java_Platform,NA
 31,http://dbpedia.org/resource/Axis_Communications,Axis Communications
 31,http://dbpedia.org/resource/Java_virtual_machine,Java virtual machine
 31,http://dbpedia.org/resource/Globus_Toolkit,Globus Toolkit
@@ -1803,7 +1803,7 @@ MaterialID,Topic,Label
 32,http://dbpedia.org/resource/Unix,Unix
 32,http://dbpedia.org/resource/CURL,CURL
 32,http://dbpedia.org/resource/Graphical_widget,Graphical widget
-32,"""http://dbpedia.org/resource/Create",NA
+32,http://dbpedia.org/resource/Create,NA
 32,http://dbpedia.org/resource/Logic_programming,Logic programming
 32,http://dbpedia.org/resource/Scalability,Scalability
 32,http://dbpedia.org/resource/Database,Database
@@ -2146,7 +2146,7 @@ MaterialID,Topic,Label
 47,http://dbpedia.org/resource/Scrum_(rugby),Scrum (rugby)
 47,http://dbpedia.org/resource/Business_logic,Business logic
 47,http://dbpedia.org/resource/Visual_dictionary,Visual dictionary
-47,"""http://dbpedia.org/resource/The_Domain",NA
+47,http://dbpedia.org/resource/The_Domain,NA
 47,http://dbpedia.org/resource/Noun,Noun
 47,http://dbpedia.org/resource/Credit_card,Credit card
 47,http://dbpedia.org/resource/Entity–relationship_model,Entity–relationship model
@@ -2174,7 +2174,7 @@ MaterialID,Topic,Label
 47,http://dbpedia.org/resource/Addison-Wesley,Addison-Wesley
 47,http://dbpedia.org/resource/Craig_Larman,Craig Larman
 47,http://dbpedia.org/resource/Prentice_Hall,Prentice Hall
-47,"""http://dbpedia.org/resource/Tual",NA
+47,http://dbpedia.org/resource/Tual,NA
 47,http://dbpedia.org/resource/Toyota_Electronic_Modulated_Suspension,Toyota Electronic Modulated Suspension
 47,http://dbpedia.org/resource/Use_case,Use case
 47,http://dbpedia.org/resource/Infrastructure_for_Spatial_Information_in_the_European_Community,Infrastructure for Spatial Information in the European Community
@@ -2412,7 +2412,7 @@ MaterialID,Topic,Label
 54,http://dbpedia.org/resource/Orange_S.A.,Orange S.A.
 54,http://dbpedia.org/resource/Snowdon_station,Snowdon station
 54,http://dbpedia.org/resource/Villa-Maria_station,Villa-Maria station
-54,"""http://dbpedia.org/resource/Saint-Henri",NA
+54,http://dbpedia.org/resource/Saint-Henri,NA
 54,http://dbpedia.org/resource/Lionel-Groulx_station,Lionel-Groulx station
 54,http://dbpedia.org/resource/Atwater_station,Atwater station
 54,http://dbpedia.org/resource/Concordia_University,Concordia University

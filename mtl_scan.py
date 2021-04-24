@@ -187,6 +187,7 @@ def gen_labels():
             label = get_label(topic_uri, sparql)
 
         except Exception as e:
+            topic_uri = topic[1].strip()
             label = "NA"
 
         data.append([materialID, topic_uri, label])
