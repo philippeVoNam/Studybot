@@ -1,4 +1,3 @@
-# import parser object from tike
 from tika import parser  
 import spacy
 import pandas as pd
@@ -7,11 +6,6 @@ import os
 from progress.bar import Bar
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-"""
-FIXME :
-materialID that did not work : [23,25,34]
-"""
-
 def read_CSV(filepath):
     with open(filepath) as f:
         lines = f.readlines()
@@ -19,12 +13,10 @@ def read_CSV(filepath):
     return lines
 
 def output_2_file(data):
-    # cities = pd.DataFrame([['Sacramento', 'California'], ['Miami', 'Florida']], columns=['City', 'State'])
     cities = pd.DataFrame(data, columns=['MaterialID', 'Topic'])
     cities.to_csv('course_material_topics.csv', index=False)
 
 def output_2_file_w_label(data):
-    # cities = pd.DataFrame([['Sacramento', 'California'], ['Miami', 'Florida']], columns=['City', 'State'])
     cities = pd.DataFrame(data, columns=['MaterialID', 'Topic', 'Label'])
     cities.to_csv('course_material_topics_w_label.csv', index=False)
 
@@ -44,7 +36,7 @@ def get_label(topic_uri, sparql):
     for result in results["results"]["bindings"]:
         return result["label"]["value"]
 
-def extract_entities(data_str, materialID, sparql):
+def extract_entities(data_str, materialID):
     nlp = spacy.blank('en')
     nlp.add_pipe('dbpedia_spotlight')
 
@@ -65,8 +57,8 @@ def scan():
 
     topic_data = []
     error_files = []
-    target_list = ["1"] # NOTE : here is the materialIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
-    targetFlag = False
+    target_list = ["36"] # NOTE : here is the materialIDs that did not work, the scanner now tries to get them (ie. if eventID in target_list)
+    targetFlag = True
     for df_material in df_materials:
         bar.next()
 
@@ -91,7 +83,7 @@ def scan():
                     data = parsed['content'] 
                       
                 try:
-                    data_ents, ent_topic = extract_entities(data, materialID, sparql)
+                    data_ents, ent_topic = extract_entities(data, materialID)
 
                     topic_data = topic_data + data_ents
 
@@ -110,7 +102,7 @@ def scan():
                 data = parsed['content'] 
                   
             try:
-                data_ents, ent_topic = extract_entities(data, materialID, sparql)
+                data_ents, ent_topic = extract_entities(data, materialID)
 
                 topic_data = topic_data + data_ents
 
@@ -207,14 +199,5 @@ def gen_labels():
 
     output_2_file_w_label(data)
 
-    print("Total number triples for topics = {}".format(len(topics)))
-
-    distinct_topics_uri = list(dict.fromkeys(distinct_topics_uri))
-    print("Total number of distinct topics = {}".format(len(distinct_topics_uri)))
-
-    print("Total number of topics in COMP-474 = {}".format(len(comp_topics)))
-    print("Total number of topics in SOEN-343 = {}".format(len(soen_topics)))
-
 if __name__ == "__main__":
-    gen_labels()
-
+    scan()
