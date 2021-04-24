@@ -21,6 +21,11 @@ def get_material_topics(material_topics, materialID):
     topics = list(material_topics[material_topics['MaterialID'] == materialID]['Topic'])
     return topics
 
+def get_all_topics(material_topics):
+    topics_labels = material_topics[["Topic", "Label"]]
+    distinct_topics_label = list(dict.fromkeys(topics_labels))
+    return distinct_topics_label
+
 def convert(events, courses, course_topics, material_topics):
 
     lectureEventDict = {}
@@ -121,7 +126,16 @@ def convert(events, courses, course_topics, material_topics):
         lectureEventIDLink = event["LectureEventID"]
 
         graph.add((
-            event_ref, STUDY.lectureLink, lectureEventDict[lectureEventIDLink]
+            event_ref, STUDY.hasCourseEvent, lectureEventDict[lectureEventIDLink]
+        ))
+
+    # make topic node with label
+    all_topics_labels = get_all_topics(material_topics)
+    for topic_label in all_topics_labels:
+        topic = topic_label[0]
+        label = topic_label[1]
+        graph.add((
+            URIRef(topic), RDFS.label, Literal(label, lang='en')
         ))
 
     return graph

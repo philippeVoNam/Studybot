@@ -18,6 +18,6 @@ SELECT ?course ?lectureEvent ?events ?resourceURI WHERE {
   ?materials foaf:topic <http://dbpedia.org/resource/Natural_language_processing> .
   ?materials rdf:resource ?resourceURI .
   
-  OPTIONAL {?events study:lectureLink ?lectureEvent .}.
+  OPTIONAL {?events study:hasCourseEvent ?lectureEvent .}.
 
 }
