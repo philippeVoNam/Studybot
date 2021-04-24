@@ -8,9 +8,14 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT ?course WHERE {
-  ?university foaf:name "Concordia University"@en .
-  ?university aiiso:teaches ?course .
-  ?course rdf:type teach:Course .
-  ?course foaf:topic <http://dbpedia.org/resource/Knowledge_Graph> .
-}
+SELECT ?courseName WHERE {{
+    ?course a teach:Course .
+    ?course foaf:name ?courseName .
+    ?course study:hasCourseEvent ?event .
+    ?event study:hasMaterial ?material .
+    ?material foaf:topic ?topic .
+    ?topic rdfs:label ?topicLabel .
+    FILTER (lang(?topicLabel) = 'en')
+    FILTER (contains(lcase(?topicLabel), 'knowledge graph') || contains('knowledge graph', lcase(?topicLabel)))
+}} GROUP BY ?courseName
+ORDER BY DESC(count(1))

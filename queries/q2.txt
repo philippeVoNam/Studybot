@@ -8,10 +8,14 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT ?topic WHERE {
-  ?course teach:courseTitle "Intelligent Systems"@en .
-  ?course study:hasCourseEvent ?courseEvent .
-  ?courseEvent rdf:type study:Lecture .
-  ?courseEvent study:eventNumber 2 .
-  ?courseEvent foaf:topic ?topic .
-}
+
+SELECT ?topic ?topicLabel WHERE {{
+    studybot:COMP-474 study:hasCourseEvent ?event .
+    ?event a study:Lecture .
+    ?event study:eventNumber 2 .
+    ?event study:hasMaterial ?material .
+    ?material foaf:topic ?topic .
+    ?topic rdfs:label ?topicLabel .
+    FILTER (lang(?topicLabel) = 'en')
+}} GROUP BY ?topic ?topicLabel
+ORDER BY DESC(count(1))

@@ -9,9 +9,6 @@ PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?name WHERE {
-  ?course rdf:type teach:Course .
-  studybot:concordia_university aiiso:teaches ?course .
-  ?course study:courseSubject studybot:COMP .
-  ?course study:courseNumber "474" .
-  ?course teach:courseTitle ?name .
-}
+  studybot:{course_subject}-{course_number} teach:courseTitle ?name .
+} LIMIT 1
+

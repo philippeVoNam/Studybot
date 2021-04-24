@@ -9,5 +9,8 @@ PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?seeAlso WHERE {
-  studybot:COMP-474 rdfs:seeAlso ?seeAlso .
+    ?topic rdfs:seeAlso ?seeAlso .
+    ?topic rdfs:label ?topicLabel .
+    FILTER (lang(?topicLabel) = 'en')
+    FILTER (contains(lcase(?topicLabel), 'intelligent systems') || contains('intelligent systems', lcase(?topicLabel)))
 }

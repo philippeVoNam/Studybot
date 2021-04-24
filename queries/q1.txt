@@ -8,7 +8,6 @@ PREFIX teach: <http://linkedscience.org/teach/ns#>
 PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
 PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
-SELECT ?topic WHERE {
-  ?course teach:courseTitle "Intelligent Systems"@en .
-  ?course foaf:topic ?topic .
-}
+SELECT ?description WHERE {
+    studybot:COMP-474 teach:courseDescription ?description .
+} LIMIT 1

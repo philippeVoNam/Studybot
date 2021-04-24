@@ -4,7 +4,7 @@ import os
 from SPARQLWrapper import JSON, SPARQLWrapper
 
 SPARQL_SERVER = os.environ.get(
-    'SPARQL_SERVER', "http://192.168.2.19:3030/ds/sparql")
+    'SPARQL_SERVER', "http://192.168.2.19:3030/studybot/sparql")
 sparql = SPARQLWrapper(SPARQL_SERVER)
 sparql.setReturnFormat(JSON)
 
@@ -122,7 +122,7 @@ def get_course_name(course_subject, course_number):
 
 def get_courses_by_event(event):
     setQuery(f"""
-        SELECT ?courseName WHERE {{
+        SELECT DISTINCT ?courseName WHERE {{
             ?course a teach:Course .
             ?course teach:courseTitle ?courseName .
             ?course study:hasCourseEvent ?event .

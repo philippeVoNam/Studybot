@@ -101,7 +101,6 @@ class ActionEventTopics(Action):
 
         topics = get_event_topics(
             course_subject, course_number, event, event_number)
-        topics = ['Example Topic']
 
         logger.info('%s : results - course_subject=%s course_number=%s topics=%s',
                     self.name(), course_subject, course_number, topics)
