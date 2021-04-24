@@ -1,0 +1,21 @@
+PREFIX study: <file:///schema/study.ttl/>
+PREFIX studybot: <file:///data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX teach: <http://linkedscience.org/teach/ns#>
+PREFIX aiiso: <http://purl.org/vocab/aiiso/schema#>
+PREFIX ical: <http://www.w3.org/2002/12/cal#>
+PREFIX co: <http://purl.org/ontology/co/core#>
+PREFIX st: <http://ns.inria.fr/sparql-template/>
+
+SELECT ?course (count(1) as ?count) WHERE {
+  ?uni rdfs:label "Concordia University"@en .
+  ?uni aiiso:teaches ?course .
+  ?course study:courseEvent ?events .
+  ?events study:hasMaterial ?materials .
+  ?materials foaf:topic <http://dbpedia.org/resource/Artificial_intelligence> .
+}
+GROUP BY ?course
+ORDER BY DESC(?count)

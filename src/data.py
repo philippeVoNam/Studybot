@@ -62,6 +62,14 @@ def load_events(data_dir):
 
     return lectureDataCSV
 
+def load_material_topics(data_dir):
+    lecture_data_dir = os.path.join(data_dir, 'lecture_data')
+
+    materialTopicsCSV = pd.read_csv(os.path.join(
+        lecture_data_dir, 'course_material_topics.csv'),
+        encoding='latin1')
+
+    return materialTopicsCSV 
 
 def load_data(data_dir):
     courses, course_topics = load_courses(data_dir)
@@ -71,4 +79,6 @@ def load_data(data_dir):
 
     events = load_events(data_dir)
 
-    return universities, subjects, courses, course_topics, events
+    material_topics = load_material_topics(data_dir)
+
+    return universities, subjects, courses, course_topics, events, material_topics

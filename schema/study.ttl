@@ -86,6 +86,7 @@
   rdfs:label "course event"@en ;
   rdfs:comment "Relates a course event to a course"@en ;
   rdfs:domain teach:Course ;
+  rdfs:domain <CourseEvent> ;
   rdfs:range <CourseEvent> .
 
 <eventNumber>
