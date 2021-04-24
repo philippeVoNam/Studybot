@@ -10,7 +10,7 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?topic WHERE {
   ?course teach:courseTitle "Intelligent Systems"@en .
-  ?course study:courseEvent ?courseEvent .
+  ?course study:hasCourseEvent ?courseEvent .
   ?courseEvent rdf:type study:Lecture .
   ?courseEvent study:eventNumber 2 .
   ?courseEvent foaf:topic ?topic .

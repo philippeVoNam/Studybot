@@ -117,7 +117,7 @@ def convert(events, courses, course_topics, material_topics):
         course_ref = get_course_resource(course)
 
         graph.add((
-            course_ref, STUDY.courseEvent, event_ref
+            course_ref, STUDY.hasCourseEvent, event_ref
         ))
 
     # make link from tutorial/lab to lecture event

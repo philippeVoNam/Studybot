@@ -80,7 +80,7 @@
   rdfs:label "Lab"@en ;
   rdfs:comment "A hands-on event where students are given tasks to complete related to the recent lectures"@en .
 
-<courseEvent>
+<hasCourseEvent>
   rdf:type rdfs:Property ;
   rdfs:subPropertyOf teach:arrangedAt ;
   rdfs:label "course event"@en ;

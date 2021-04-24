@@ -13,7 +13,7 @@ PREFIX st: <http://ns.inria.fr/sparql-template/>
 SELECT ?course (count(1) as ?count) WHERE {
   ?uni rdfs:label "Concordia University"@en .
   ?uni aiiso:teaches ?course .
-  ?course study:courseEvent ?events .
+  ?course study:hasCourseEvent ?events .
   ?events study:hasMaterial ?materials .
   ?materials foaf:topic <http://dbpedia.org/resource/Artificial_intelligence> .
 }
