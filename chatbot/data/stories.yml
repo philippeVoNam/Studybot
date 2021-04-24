@@ -1,0 +1,73 @@
+version: "2.0"
+
+stories:
+
+- story: course description
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_course
+  - action: action_about_course
+
+- story: event topics
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_topics_of_event
+  - action: action_event_topics
+
+- story: search courses by topic
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_courses_for_topic
+  - action: action_search_by_topic
+
+- story: how many courses at university
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_how_many_courses
+  - action: action_count_courses
+
+- story: courses in subject
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_what_courses_in_subject
+  - action: action_search_by_subject
+
+- story: courses name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_course_name
+  - action: action_lookup_course_name
+
+- story: courses that require an event
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_courses_with_events
+  - action: action_search_by_event
+
+- story: find course outline
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_course_outline
+  - action: action_find_outline
+
+- story: find course material
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_where_course_material
+  - action: action_find_material
+
+- story: get more info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_more_info
+  - action: action_more_info

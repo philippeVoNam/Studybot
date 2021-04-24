@@ -1,0 +1,164 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- regex: course_subject
+  examples: |
+    - [a-zA-Z]{4}
+- regex: course_number
+  examples: |
+    - \d{3,4}[a-zA-Z]?
+- intent: ask_about_course
+  examples: |
+    - what is [COMP](course_subject) [474](course_number) about
+    - what is [SOEN](course_subject) [343](course_number) about
+    - what about [MATH](course_subject) [203](course_number)
+    - tell me about [COMP](course_subject) [474](course_number)
+    - describe [SOEN](course_subject) [343](course_number)
+
+- lookup: event
+  examples: |
+    - lab
+    - lecture
+    - tutorial
+- intent: ask_topics_of_event
+  examples: |
+    - which topics are covered in [lab](event) #[2](CARDINAL) of [COMP](course_subject) [474](course_number)
+    - which topics are covered in [lecture](event) #[2](CARDINAL) of [COMP](course_subject) [474](course_number)
+    - what topics are covered in [lab](event) [12](CARDINAL) of [SOEN](course_subject) [343](course_number)
+    - what topics are covered in [lecture](event) [12](CARDINAL) of [SOEN](course_subject) [343](course_number)
+    - what is taught in [tutorial](event) #[1](CARDINAL) of [COMP](course_subject) [474](course_number)
+    - topics [tutorial](event) [6](CARDINAL) [SOEN](course_subject) [343](course_number)
+
+- intent: ask_courses_for_topic
+  examples: |
+    - which courses cover [Expert Systems](topic)
+    - which courses cover [Data Model](topic)
+    - which courses cover [DBpedia](topic)
+    - which courses cover [Social Network](topic)
+    - which courses cover [Text Mining](topic)
+    - which courses cover [Information Extraction](topic)
+    - which courses cover [Natural Language Processing](topic)
+    - which courses cover [XML](topic)
+    - which courses cover [Algorithm](topic)
+    - which courses cover [Supervised Learning](topic)
+    - what courses cover [NLP](topic)
+    - where can I learn about [RDF Schema](topic)
+    - where can I learn about [Computer Science](topic)
+    - where can I learn about [Reading](topic)
+    - where can I learn about [Standford University](topic)
+    - where can I learn about [Moodle](topic)
+    - where can I learn about [Intelligence](topic)
+    - where can I learn about [Construction](topic)
+    - where can I learn about [Open-source Software](topic)
+    - where can I learn about [Monty Python](topic)
+    - where can I learn about [Deep Learning](topic)
+    - where can I learn about [Grammar](topic)
+    - where can I learn about [Semantics](topic)
+    - where can I learn about [Modular Arithmetic](topic)
+    - where can I learn [Knowledge Graph](topic)
+    - where can I learn [Feature Engineering](topic)
+    - where can I learn [SPARQL](topic)
+    - where can I learn [SQL](topic)
+    - where can I learn [Python](topic)
+    - where can I learn [Information Extraction](topic)
+    - what courses teach [Artificial Intelligence](topic)
+    - what courses teach [Logic Programming](topic)
+    - what courses teach [Graph Database](topic)
+    - in what class will I learn about [Intelligent Agent](topic)
+    - in what class will I learn about [Amazon Web Services](topic)
+    - in what class will I learn about [Knowledge Base](topic)
+    - in what class will I learn about [Proxemics](topic)
+    - i want to study [N-Triples]
+    - i want to study [Unix]
+    - i want to study [Data Structure]
+    - i want to study [Computer Graphics]
+    - i want to study [Functional Programming]
+    - i want to study [Applied Artificial Intelligence]
+
+- intent: ask_how_many_courses
+  examples: |
+    - how many courses are offered at [Concordia University](ORG)
+    - how many courses are offered at [Mcgill University](ORG)
+    - how many courses does [Concordia University](ORG) offer
+
+- intent:  ask_what_courses_in_subject
+  examples: |
+    - what courses are offered at [Concordia University](ORG) in [COMP](course_subject)
+    - which courses are offered at [Sherbrooke University](ORG) in [SOEN](course_subject)
+    - what courses does [UQAM](ORG) have in [ENCS](course_subject)
+
+- intent: ask_course_name
+  examples: |
+    - what is the name of course [COMP](course_subject) [474](course_number) at [Concordia University](ORG)
+    - what is the name of course [SOEN](course_subject) [343](course_number) at [Concordia](ORG)
+    - what is the name of course [COMP](course_subject) [474](course_number)
+    - what is [COMP](course_subject) [474](course_number)
+
+- intent: ask_courses_with_events
+  examples: |
+    - what courses require a [lab](event) at [Concordia University](ORG)
+    - which courses require a [tutorial](event) at [Concordia University](ORG)
+    - what courses have a [lecture](event) at [Concordia University](ORG)
+    - what courses have a [lecture](event)
+    - which courses require a [tutorial](event)
+
+- intent: ask_course_outline
+  examples: |
+    - where is the course outline for [COMP](course_subject) [474](course_number)
+    - where is the course outline for [SOEN](course_subject) [343](course_number)
+    - where can I find the course outline for [COMP](course_subject) [474](course_number)
+    - course outline [COMP](course_subject) [474](course_number)
+
+- lookup: material
+  examples: |
+    - slides
+    - reading
+    - worksheet
+
+- intent: ask_where_course_material
+  examples: |
+    - where is the [slides](material) for [lab](event) #[2](CARDINAL) of [COMP](course_subject) [474](course_number)
+    - where is the [reading](material) for [lecture](event) #[5](CARDINAL) for [SOEN](course_subject) [343](course_number)
+    - where is the [worksheet](material) for [lecture](event) #[8](CARDINAL) of [COMP](course_subject) [474](course_number)
+    - where can I find the [slides](material) for [lab](event) #[2](CARDINAL) for [COMP](course_subject) [474](course_number)
+    - where can I find the [slides](material) for [lab](event) #[2](CARDINAL) in [COMP](course_subject) [474](course_number)
+    - where can I find the [slides](material) for [lab](event) #[2](CARDINAL) of [COMP](course_subject) [474](course_number)
+
+- intent: ask_more_info
+  examples: |
+    - where can I find more information about [Concordia University](topic)
+    - where can I find more information about [Intelligent Systems](topic)
+    - I want to know more about [Mcgill University](topic)
+    - How can I find out more about [DBPedia](topic)
+    - more on [Semantic Web](topic)
+

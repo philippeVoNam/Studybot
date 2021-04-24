@@ -1,0 +1,36 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "en_core_web_md"
+
+pipeline:
+# Based on https://www.machinelearningplus.com/nlp/chatbot-with-rasa-and-spacy/
+- name: "SpacyNLP"
+  # language model to load
+  model: "en_core_web_md"
+
+  # when retrieving word vectors, this will decide if the casing
+  # of the word is relevant. E.g. `hello` and `Hello` will
+  # retrieve the same vector, if set to `False`. For some
+  # applications and models it makes sense to differentiate
+  # between these two words, therefore setting this to `True`.
+  case_sensitive: False
+- name: "SpacyTokenizer"             # splits the sentence into tokens
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"         # uses the pretrained spacy NER model
+- name: "RegexEntityExtractor"
+- name: "SpacyFeaturizer"            # transform the sentence into a vector representation
+- name: "EntitySynonymMapper"        # trains the synonyms
+- name: "SklearnIntentClassifier"    # uses the vector representation to classify using SVM
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+#   - name: RulePolicy

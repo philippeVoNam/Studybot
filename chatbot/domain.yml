@@ -1,0 +1,92 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - ask_about_course
+  - ask_topics_of_event
+  - ask_courses_for_topic
+  - ask_how_many_courses
+  - ask_what_courses_in_subject
+  - ask_course_name
+  - ask_courses_with_events
+  - ask_course_outline
+  - ask_where_course_material
+  - ask_more_info
+
+entities:
+  - course_subject
+  - course_number
+  - CARDINAL
+  - event
+  - topic
+  - ORG
+  - material
+
+responses:
+  utter_greet:
+    - text: "Hello! What can I do for you?"
+    - text: "Hi! How can I help you?"
+    - text: "Greetings! What are you looking for?"
+    - text: "Hey! How can I be of assistance?"
+
+  utter_no_results:
+    - text: "Sorry, I wasn't able to find any information."
+    - text: "Sorry, I don't know the answer to that."
+
+  utter_no_understand:
+    - text: "I'm sorry, I don't understand. Try asking a different way."
+    - text: "Opps, I didn't understand that. Try asking a different way."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_course_topic_results:
+    - text: "{event} #{event_number} of {course_subject} {course_number} covered the following topics: {topics}"
+    - text: "The following topics were covered in {event} #{event_number}: {topics}"
+    - text: "Here are the topics: {topics}"
+
+  utter_courses_with_topic_results:
+    - text: "{topic} is discussed in: {courses}"
+    - text: "{topic} is covered in the following courses: {courses}"
+    - text: "{topic} is included in these courses: {courses}"
+
+  utter_number_of_courses:
+    - text: "{university} has {number} courses"
+    - text: "Thre are {number} courses at {university}"
+
+  utter_courses_in_subject:
+    - text: "{course_subject} offers following courses: {courses}"
+    - text: "These are the courses in {course_subject}: {courses}"
+
+  utter_course_name:
+    - text: "{course_subject} {course_number} is called {name}."
+
+  utter_courses_with_event:
+    - text: "These are the courses with {event}: {courses}"
+
+  utter_where_to_find:
+    - text: "You can find it here: {url}"
+    - text: "Here it is: {url}"
+    - text: "This is where you can find it: {url}"
+
+  utter_more_info:
+    - text: "Check this out: {url}"
+    - text: "You can find out more here: {url}"
+    - text: "Try this: {url}"
+
+actions:
+  - action_about_course
+  - action_event_topics
+  - action_search_by_topic
+  - action_count_courses
+  - action_search_by_subject
+  - action_lookup_course_name
+  - action_search_by_event
+  - action_find_outline
+  - action_find_material
+  - action_more_info
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
