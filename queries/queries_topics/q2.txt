@@ -10,11 +10,12 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 PREFIX co: <http://purl.org/ontology/co/core#>
 PREFIX st: <http://ns.inria.fr/sparql-template/>
 
-SELECT ?course (count(distinct ?course) as ?count) WHERE {
+SELECT ?course (count(1) as ?count) WHERE {
   ?uni rdfs:label "Concordia University"@en .
   ?uni aiiso:teaches ?course .
   ?course study:courseEvent ?events .
   ?events study:hasMaterial ?materials .
-  ?materials foaf:topic <http://dbpedia.org/resource/Lois_Lane> .
+  ?materials foaf:topic <http://dbpedia.org/resource/Artificial_intelligence> .
 }
 GROUP BY ?course
+ORDER BY DESC(?count)

@@ -16,4 +16,5 @@ SELECT ?topic ?label ?events ?resourceURI WHERE {
   ?events study:hasMaterial ?materials .
   ?materials foaf:topic ?topic .
   ?materials rdf:resource ?resourceURI .
+  ?topic rdfs:label ?label .
 }
