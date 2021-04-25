@@ -68,13 +68,12 @@ def get_courses_by_topic(topic):
     setQuery(f"""
         SELECT ?courseName WHERE {{
             ?course a teach:Course .
-            ?course foaf:name ?courseName .
+            ?course teach:courseTitle ?courseName .
             ?course study:hasCourseEvent ?event .
             ?event study:hasMaterial ?material .
             ?material foaf:topic ?topic .
             ?topic rdfs:label ?topicLabel .
-            FILTER (lang(?topicLabel) = 'en')
-            FILTER (contains(lcase(?topicLabel), '{topic.lower()}') || contains('{topic.lower()}', lcase(?topicLabel)))
+            FILTER (lang(?topicLabel) = 'en' && contains(lcase(?topicLabel), '{topic.lower()}'@en) || contains('{topic.lower()}'@en, lcase(?topicLabel)))
         }} GROUP BY ?courseName
         ORDER BY DESC(count(1))
     """)
@@ -101,6 +100,23 @@ def get_courses_by_subject(subject):
     bindings = results['bindings']
     if bindings:
         return list(map(lambda b: f"{b['courseName']['value']}", bindings))
+    else:
+        return None
+
+
+def get_number_of_courses(university):
+    setQuery(f"""
+        SELECT (COUNT(DISTINCT ?course) AS ?count) WHERE {{
+            ?university foaf:name ?universityName.
+            ?university aiiso:teaches ?course .
+            ?course a teach:Course .
+            FILTER (lcase(?universityName) = '{university.lower()}'@en)
+        }}
+    """)
+    results = sparql.queryAndConvert()['results']
+    bindings = results['bindings']
+    if bindings:
+        return bindings[0]['count']['value']
     else:
         return None
 
@@ -179,8 +195,7 @@ def get_more_info(topic):
         SELECT ?seeAlso WHERE {{
             ?topic rdfs:seeAlso ?seeAlso .
             ?topic rdfs:label ?topicLabel .
-            FILTER (lang(?topicLabel) = 'en')
-            FILTER (contains(lcase(?topicLabel), '{topic.lower()}') || contains('{topic.lower()}', lcase(?topicLabel)))
+            FILTER (lang(?topicLabel) = 'en' && contains(lcase(?topicLabel), '{topic.lower()}'@en) || contains('{topic.lower()}'@en, lcase(?topicLabel)))
         }}
     """)
 

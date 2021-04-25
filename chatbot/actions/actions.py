@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from .sparql import (get_course_description, get_course_name,
                      get_course_outline_location, get_courses_by_event,
                      get_courses_by_subject, get_courses_by_topic,
-                     get_event_topics, get_material_location, get_more_info)
+                     get_event_topics, get_material_location, get_more_info, get_number_of_courses)
 
 logger = logging.getLogger('studybot')
 logger.setLevel(logging.INFO)
@@ -188,6 +188,41 @@ class ActionSearchBySubject(Action):
         dispatcher.utter_message(response='utter_courses_in_subject',
                                  courses=course_list,
                                  course_subject=course_subject)
+
+        return []
+
+
+class ActionHowManyCourses(Action):
+
+    def name(self) -> Text:
+        return "action_count_courses"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        university = get_lastest_entity_value_or_none(tracker, 'ORG')
+
+        logger.info('%s - university=%s',
+                    self.name(), university)
+
+        if not all([university]):
+            dispatcher.utter_message(
+                response='utter_no_understand')
+            return []
+
+        count = get_number_of_courses(university)
+
+        logger.info('%s : results - university=%s count=%s',
+                    self.name(), university, count)
+
+        if not count:
+            dispatcher.utter_message(response="utter_no_results")
+            return []
+
+        dispatcher.utter_message(response='utter_course_count',
+                                 count=count,
+                                 university=university)
 
         return []
 

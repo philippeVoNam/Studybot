@@ -11,6 +11,5 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 SELECT ?seeAlso WHERE {
     ?topic rdfs:seeAlso ?seeAlso .
     ?topic rdfs:label ?topicLabel .
-    FILTER (lang(?topicLabel) = 'en')
-    FILTER (contains(lcase(?topicLabel), 'intelligent systems') || contains('intelligent systems', lcase(?topicLabel)))
+    FILTER (lang(?topicLabel) = 'en' && contains(lcase(?topicLabel), 'intelligent systems'@en) || contains('intelligent systems'@en, lcase(?topicLabel)))
 }

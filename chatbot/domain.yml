@@ -62,6 +62,10 @@ responses:
   utter_course_name:
     - text: "{course_subject} {course_number} is called {name}."
 
+  utter_course_count:
+    - text: "{university} offers {count} courses."
+    - text: "There {count} courses at {university}."
+
   utter_courses_with_event:
     - text: "These are the courses with {event}: {courses}"
 

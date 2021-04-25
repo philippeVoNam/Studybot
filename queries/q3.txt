@@ -10,12 +10,11 @@ PREFIX ical: <http://www.w3.org/2002/12/cal#>
 
 SELECT ?courseName WHERE {{
     ?course a teach:Course .
-    ?course foaf:name ?courseName .
+    ?course teach:courseTitle ?courseName .
     ?course study:hasCourseEvent ?event .
     ?event study:hasMaterial ?material .
     ?material foaf:topic ?topic .
     ?topic rdfs:label ?topicLabel .
-    FILTER (lang(?topicLabel) = 'en')
-    FILTER (contains(lcase(?topicLabel), 'knowledge graph') || contains('knowledge graph', lcase(?topicLabel)))
+    FILTER (lang(?topicLabel) = 'en' && contains(lcase(?topicLabel), 'knowledge graph'@en) || contains('knowledge graph'@en, lcase(?topicLabel)))
 }} GROUP BY ?courseName
 ORDER BY DESC(count(1))
