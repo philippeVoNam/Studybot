@@ -27,3 +27,21 @@ python run_queries.py studyboy.n3 queries/*.txt
 ```
 
 The results of the queries will be saved to the same directly as qX.out.txt
+
+
+## Chatbot
+
+To train the chatbot:
+```
+cd chatbot
+rasa train
+```
+
+To run the chatbot:
+```
+rasa run actions
+```
+and in a second terminal
+```
+rasa shell
+```
