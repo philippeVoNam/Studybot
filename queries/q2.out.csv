@@ -1,1 +1,145 @@
-topic
+topic,topicLabel
+http://dbpedia.org/resource/Uniform_Resource_Identifier,Uniform Resource Identifier
+http://dbpedia.org/resource/Resource_Description_Framework,Resource Description Framework
+http://dbpedia.org/resource/DBpedia,DBpedia
+http://dbpedia.org/resource/Artificial_intelligence,Artificial intelligence
+http://dbpedia.org/resource/Main_Page,Main Page
+http://dbpedia.org/resource/SQL,SQL
+http://dbpedia.org/resource/City,City
+http://dbpedia.org/resource/Natural_language_processing,Natural language processing
+http://dbpedia.org/resource/Knowledge_Graph,Knowledge Graph
+http://dbpedia.org/resource/Facebook,Facebook
+http://dbpedia.org/resource/Graph_database,Graph database
+http://dbpedia.org/resource/Human-readable_medium,Human-readable medium
+http://dbpedia.org/resource/Web_Ontology_Language,Web Ontology Language
+http://dbpedia.org/resource/Sameer_(lyricist),Sameer (lyricist)
+http://dbpedia.org/resource/TAG_Heuer,TAG Heuer
+http://dbpedia.org/resource/Graphiq,Graphiq
+http://dbpedia.org/resource/Notation3,Notation3
+http://dbpedia.org/resource/Knowledge_Navigator,Knowledge Navigator
+http://dbpedia.org/resource/Description_logic,Description logic
+http://dbpedia.org/resource/AI_winter,AI winter
+http://dbpedia.org/resource/Computer_science,Computer science
+http://dbpedia.org/resource/Semantic_Web,Semantic Web
+http://dbpedia.org/resource/GeoNames,GeoNames
+http://dbpedia.org/resource/YAGO_(database),YAGO (database)
+http://dbpedia.org/resource/Warren_Sturgis_McCulloch,Warren Sturgis McCulloch
+http://dbpedia.org/resource/Programming_language,Programming language
+http://dbpedia.org/resource/Edward_S._Herman,Edward S. Herman
+http://dbpedia.org/resource/Open_access,Open access
+http://dbpedia.org/resource/N-Triples,N-Triples
+http://dbpedia.org/resource/Wikipedia,Wikipedia
+http://dbpedia.org/resource/Terry_Winograd,Terry Winograd
+http://dbpedia.org/resource/Multiple_choice,Multiple choice
+http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific,College of Osteopathic Medicine of the Pacific
+http://dbpedia.org/resource/Le_Titre,Le Titre
+http://dbpedia.org/resource/Simple_Knowledge_Organization_System,Simple Knowledge Organization System
+http://dbpedia.org/resource/Lio,Lio
+http://dbpedia.org/resource/World_Wide_Web,World Wide Web
+http://dbpedia.org/resource/Web_server,Web server
+http://dbpedia.org/resource/Wikidata,Wikidata
+http://dbpedia.org/resource/John_Lennon,John Lennon
+http://dbpedia.org/resource/World_Wide_Web_Consortium,World Wide Web Consortium
+http://dbpedia.org/resource/London,London
+http://dbpedia.org/resource/String_instrument,String instrument
+http://dbpedia.org/resource/Internationalized_Resource_Identifier,Internationalized Resource Identifier
+http://dbpedia.org/resource/The_Glass_Palace,The Glass Palace
+http://dbpedia.org/resource/SPARQL,SPARQL
+http://dbpedia.org/resource/Apple_Inc.,Apple Inc.
+http://dbpedia.org/resource/Julia_the_Elder,Julia the Elder
+http://dbpedia.org/resource/XML,XML
+http://dbpedia.org/resource/Skolem_normal_form,Skolem normal form
+http://dbpedia.org/resource/Mona_Lisa,Mona Lisa
+http://dbpedia.org/resource/General_officer,General officer
+http://dbpedia.org/resource/Adenosine_A1_receptor,Adenosine A1 receptor
+http://dbpedia.org/resource/JSON-LD,JSON-LD
+http://dbpedia.org/resource/Ecosystem,Ecosystem
+http://dbpedia.org/resource/Linux.conf.au,Linux.conf.au
+http://dbpedia.org/resource/Java_virtual_machine,Java virtual machine
+http://dbpedia.org/resource/Liverpool,Liverpool
+http://dbpedia.org/resource/Transformers,Transformers
+http://dbpedia.org/resource/WordNet,WordNet
+http://dbpedia.org/resource/Common_sense,Common sense
+http://dbpedia.org/resource/Layer_cake,Layer cake
+http://dbpedia.org/resource/Software_engineering,Software engineering
+http://dbpedia.org/resource/Conscription,Conscription
+http://dbpedia.org/resource/Data_integration,Data integration
+http://dbpedia.org/resource/Application_programming_interface,Application programming interface
+http://dbpedia.org/resource/Substring,Substring
+http://dbpedia.org/resource/Alfred_Lennon,Alfred Lennon
+http://dbpedia.org/resource/SHRDLU,SHRDLU
+http://dbpedia.org/resource/Tbox,Tbox
+http://dbpedia.org/resource/Open_Mind_Common_Sense,Open Mind Common Sense
+http://dbpedia.org/resource/Semantic_network,Semantic network
+http://dbpedia.org/resource/Serialization,Serialization
+http://dbpedia.org/resource/Knowledge_representation_and_reasoning,Knowledge representation and reasoning
+http://dbpedia.org/resource/David_Rumelhart,David Rumelhart
+http://dbpedia.org/resource/South_Korea,South Korea
+http://dbpedia.org/resource/Kindergarten,Kindergarten
+http://dbpedia.org/resource/Google,Google
+http://dbpedia.org/resource/Data_model,Data model
+http://dbpedia.org/resource/FOAF_(ontology),FOAF (ontology)
+http://dbpedia.org/resource/String_theory,String theory
+http://dbpedia.org/resource/Machine_learning,Machine learning
+http://dbpedia.org/resource/Ontology,Ontology
+http://dbpedia.org/resource/International_Standard_Book_Number,International Standard Book Number
+http://dbpedia.org/resource/RDF_Schema,RDF Schema
+http://dbpedia.org/resource/RDFa,RDFa
+http://dbpedia.org/resource/Peter_Norvig,Peter Norvig
+http://dbpedia.org/resource/Route_nationale_10,Route nationale 10
+http://dbpedia.org/resource/Liyang,Liyang
+http://dbpedia.org/resource/Personalized_medicine,Personalized medicine
+http://dbpedia.org/resource/Cyc,Cyc
+http://dbpedia.org/resource/Free_State_Bottleneck,Free State Bottleneck
+http://dbpedia.org/resource/Formula_One,Formula One
+http://dbpedia.org/resource/French_language,French language
+http://dbpedia.org/resource/Heidelberg,Heidelberg
+http://dbpedia.org/resource/Oracle_Spatial_and_Graph,Oracle Spatial and Graph
+http://dbpedia.org/resource/Google_Assistant,Google Assistant
+http://dbpedia.org/resource/Neo4j,Neo4j
+http://dbpedia.org/resource/Satori,Satori
+http://dbpedia.org/resource/Bundesautobahn_2,Bundesautobahn 2
+http://dbpedia.org/resource/Reading,Reading
+http://dbpedia.org/resource/CLOUD_experiment,CLOUD experiment
+http://dbpedia.org/resource/YouTube,YouTube
+http://dbpedia.org/resource/Auteur,Auteur
+http://dbpedia.org/resource/Le_Palais,Le Palais
+http://dbpedia.org/resource/HTML,HTML
+http://dbpedia.org/resource/Alice_and_Bob,Alice and Bob
+http://dbpedia.org/resource/Poems_by_Edgar_Allan_Poe,Poems by Edgar Allan Poe
+http://dbpedia.org/resource/Hanover,Hanover
+http://dbpedia.org/resource/MAX_Light_Rail,MAX Light Rail
+http://dbpedia.org/resource/HarperCollins,HarperCollins
+http://dbpedia.org/resource/Data_type,Data type
+http://dbpedia.org/resource/Berlin,Berlin
+http://dbpedia.org/resource/PHP,PHP
+http://dbpedia.org/resource/Schema.org,Schema.org
+http://dbpedia.org/resource/Frog,Frog
+http://dbpedia.org/resource/E-carrier,E-carrier
+http://dbpedia.org/resource/Food_web,Food web
+http://dbpedia.org/resource/Automation,Automation
+http://dbpedia.org/resource/Logic,Logic
+http://dbpedia.org/resource/Facebook_Graph_Search,Facebook Graph Search
+http://dbpedia.org/resource/Discovery_Channel,Discovery Channel
+http://dbpedia.org/resource/Euclidean_space,Euclidean space
+http://dbpedia.org/resource/Taylorcraft_Auster,Taylorcraft Auster
+http://dbpedia.org/resource/String_literal,String literal
+http://dbpedia.org/resource/Apple_A12,Apple A12
+http://dbpedia.org/resource/Metamorphosis,Metamorphosis
+http://dbpedia.org/resource/Miroirs,Miroirs
+http://dbpedia.org/resource/Prentice_Hall,Prentice Hall
+http://dbpedia.org/resource/Leonardo_da_Vinci,Leonardo da Vinci
+http://dbpedia.org/resource/Abstract_and_concrete,Abstract and concrete
+http://dbpedia.org/resource/Stuart_J._Russell,Stuart J. Russell
+http://dbpedia.org/resource/Machine-readable_data,Machine-readable data
+http://dbpedia.org/resource/Database,Database
+http://dbpedia.org/resource/Knowledge_base,Knowledge base
+http://dbpedia.org/resource/Intelligent_agent,Intelligent agent
+http://dbpedia.org/resource/McGill_University,McGill University
+http://dbpedia.org/resource/Montreal,Montreal
+http://dbpedia.org/resource/LinkedIn,LinkedIn
+http://dbpedia.org/resource/The_Details,The Details
+http://dbpedia.org/resource/HTTP_303,HTTP 303
+http://dbpedia.org/resource/Concordia_University,Concordia University
+http://dbpedia.org/resource/URL,URL
+http://dbpedia.org/resource/Public_Knowledge,Public Knowledge
